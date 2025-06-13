@@ -24,11 +24,11 @@ I'm an aspiring full-stack developer currently expanding my skills in both front
 
 ## 🌐 Socials:
 
+[![Email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:alliahgabrielle@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/alliahgalang)
 [![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?logo=Facebook&logoColor=white)](https://facebook.com/alliahgabriell3)
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/alliahgabrielle_)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/alliahgalang)
 [![X](https://img.shields.io/badge/X-black.svg?logo=X&logoColor=white)](https://x.com/alliahgabriell3)
-[![Email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:alliahgabrielle@gmail.com)
 
 ---
 
@@ -53,13 +53,6 @@ I'm an aspiring full-stack developer currently expanding my skills in both front
 ## 📊 GitHub Stats:
 
 ![](https://nirzak-streak-stats.vercel.app/?user=alliahgabrielle&theme=dark&hide_border=false)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=alliahgabrielle&theme=dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
-
----
-
-## 🏆 GitHub Trophies:
-
-![](https://github-profile-trophy.vercel.app/?username=alliahgabrielle&theme=radical&no-frame=false&no-bg=false&margin-w=4)
 
 ---
 
