@@ -64,10 +64,6 @@ I'm an aspiring full-stack developer currently expanding my skills in both front
 
 ---
 
-[![](https://visitcount.itsvg.in/api?id=alliahgabrielle&icon=0&color=0)](https://visitcount.itsvg.in)
-
----
-
 ## 💰 You Can Help Me by Donating
 
 [![BuyMeABook](https://img.shields.io/badge/Buy%20Me%20a%20Book-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/alliahgabrielle) 
