@@ -1,6 +1,5 @@
 # 💫 About Me:
 
-## 👋 About Me<br><br>
 Hi! I'm Alliah, but please call me **Gab** 🌸<br>
 I'm an aspiring full-stack developer currently expanding my skills in both frontend and backend development. I'm passionate about creating beautiful, user-focused web experiences— and I'm always eager to learn something new!<br><br>
 
