@@ -13,8 +13,8 @@ I'm an aspiring full-stack developer currently expanding my skills in both front
 - Learn from your experience— feel free to teach me things you think I could improve!<br><br>
 
 📫 **Let’s connect:**<br>
-- Email: alliahgabrielle@gmail.com<br>
-- Website: [alliahgabrielle.dev](https://gabicode.dev)<br>
+- Email: [alliahgabrielle@gmail.com](alliahgabrielle@gmail.com)<br>
+- Website: [alliahgabrielle.dev](https://alliahgabrielle.vercel.app/)<br>
 - Instagram: [@alliahgabrielle_](https://instagram.com/alliahgabrielle_)<br>
 - Twitter: [@alliahgabriell3](https://twitter.com/alliahgabriell3)<br><br>
 
