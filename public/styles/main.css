@@ -24,7 +24,17 @@ body {
 
 /* Hero Section Styles */
 .hero-title {
-  font-family: 'Inter', sans-serif; 
+  font-family: 'Abril Fatface', serif; 
+  line-height: 1.2;
+  background: linear-gradient(to bottom left, #ffe4e6, #ccfbf1); 
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  font-weight: bold;
+}
+.hero-subtitle {
+  font-family: 'Lato', sans-serif; 
   letter-spacing: -0.05em;
   line-height: 1.2;
   background: linear-gradient(to bottom left, #ffe4e6, #ccfbf1); 
@@ -33,66 +43,10 @@ body {
   color: transparent;
   text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
-
-.dark .hero-title {
-  background: linear-gradient(to right, #ec4899, #8b5cf6);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
-
-.hero-subtitle {
-  font-family: 'Inter', sans-serif;
-  line-height: 1.6;
-  letter-spacing: 0.01em;
-}
-
-.hero-cta {
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.hero-cta::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(45deg, #ec4899, #8b5cf6);
-  z-index: -1;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.hero-cta:hover::before {
-  opacity: 1;
-}
-
-/* Animation */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.hero-title {
-  animation: fadeInUp 0.8s ease-out;
-}
-
-.hero-subtitle {
-  animation: fadeInUp 0.8s ease-out 0.2s forwards;
-  opacity: 0;
-}
-
-.hero-cta {
-  animation: fadeInUp 0.8s ease-out 0.4s forwards;
-  opacity: 0;
+.hero-cta{
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    color: #f79939; 
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
