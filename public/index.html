@@ -6,6 +6,7 @@
   <title>Gabi | Full Stack Dev</title>
   <link rel="icon" type="image/png" href="logo.png" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -22,7 +23,9 @@
   <!-- NAVIGATION -->
   <nav class="sticky top-0 bg-white dark:bg-gray-800 shadow z-50">
     <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-      <div class="text-xl font-bold">AG</div>
+<a href="#home" class="text-xl font-bold hover:text-pink-600 transition">
+  AG
+</a>
       <ul class="space-x-6 hidden sm:flex font-medium">
         <li><a href="#home" class="hover:text-pink-500">Home</a></li>
         <li><a href="#about" class="hover:text-pink-500">About Me</a></li>
@@ -43,52 +46,65 @@
     <p class="text-lg md:text-xl max-w-xl text-gray-600 dark:text-gray-300 mb-6">
       Aspiring full-stack developer with a love for books, clean code, and beautiful UI. Let's create something amazing together 🚀
     </p>
-    <a href="mailto:hello@gabicode.dev" class="bg-pink-500 text-white px-6 py-3 rounded-full font-medium shadow-lg hover:bg-pink-600 transition">
+    <a href="#contact" class="bg-pink-500 text-white px-6 py-3 rounded-full font-medium shadow-lg hover:bg-pink-600 transition">
       Contact Me
     </a>
   </header>
 
-<!-- ABOUT -->
-<section id="about" class="py-20 bg-pink-50 dark:bg-gray-800 px-6">
+<section id="about" class="py-20 bg-pink-50 dark:bg-gray-800 px-6" x-data="{ modalOpen: false, modalImage: '' }">
   <div class="max-w-5xl mx-auto">
     <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">About Me</h2>
+      <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">About Me</h2>
       <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed max-w-3xl mx-auto">
-        I'm Gabi — a self-taught full-stack developer who turns creativity into functional digital experiences.
-        Passionate about <span class="font-semibold">React, Tailwind CSS, UI/UX design</span>, and <span class="italic">language learning</span>.
-        Whether I’m designing sleek interfaces or sipping matcha while journaling, I find joy in learning and building.
+        I'm Gabi — a self-taught full-stack developer who turns creativity into real experiences.
+        Passionate about <strong>React, Tailwind CSS, UI/UX design</strong>, and <em>language learning</em>.
       </p>
     </div>
 
-    <!-- Hobbies Grid -->
+    <!-- Hobby Cards -->
     <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-      <!-- Hobby Card 1 -->
-      <div class="bg-white dark:bg-gray-700 rounded-xl shadow-lg p-6 hover:shadow-xl transition">
+      <!-- Hobby Card -->
+      <div
+        class="bg-white dark:bg-gray-700 rounded-xl shadow-lg p-4 transform hover:scale-105 transition duration-300 cursor-pointer"
+        @click="modalOpen = true; modalImage = 'public/images/coding.jpg'"
+      >
         <img src="public/images/coding.jpg" alt="Coding" class="w-full h-40 object-cover rounded-md mb-4">
-        <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Building Web Apps</h3>
-        <p class="text-gray-600 dark:text-gray-300 mt-2">I love building clean, fast, and accessible websites using modern technologies.</p>
+        <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Web Development</h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm">Turning designs and ideas into beautiful web applications.</p>
       </div>
 
-      <!-- Hobby Card 2 -->
-      <div class="bg-white dark:bg-gray-700 rounded-xl shadow-lg p-6 hover:shadow-xl transition">
+      <div
+        class="bg-white dark:bg-gray-700 rounded-xl shadow-lg p-4 transform hover:scale-105 transition duration-300 cursor-pointer"
+        @click="modalOpen = true; modalImage = 'public/images/journaling.jpg'"
+      >
         <img src="public/images/journaling.jpg" alt="Journaling" class="w-full h-40 object-cover rounded-md mb-4">
-        <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Journaling & Mindfulness</h3>
-        <p class="text-gray-600 dark:text-gray-300 mt-2">I reflect on life and organize my thoughts through journaling—pen & paper style.</p>
+        <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Journaling</h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm">Writing thoughts, gratitude, and tracking habits with intention.</p>
       </div>
 
-      <!-- Hobby Card 3 -->
-      <div class="bg-white dark:bg-gray-700 rounded-xl shadow-lg p-6 hover:shadow-xl transition">
+      <div
+        class="bg-white dark:bg-gray-700 rounded-xl shadow-lg p-4 transform hover:scale-105 transition duration-300 cursor-pointer"
+        @click="modalOpen = true; modalImage = 'public/images/languages.jpg'"
+      >
         <img src="public/images/languages.jpg" alt="Languages" class="w-full h-40 object-cover rounded-md mb-4">
         <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Language Learning</h3>
-        <p class="text-gray-600 dark:text-gray-300 mt-2">I study Korean and Japanese! I love the culture and structure of new languages.</p>
+        <p class="text-gray-600 dark:text-gray-300 text-sm">Studying Korean and Japanese as a passion project.</p>
       </div>
     </div>
 
-    <!-- Interactive Button -->
-    <div class="text-center mt-12">
-      <a href="#projects" class="inline-block bg-pink-500 text-white px-6 py-3 rounded-full font-medium hover:bg-pink-600 transition shadow-lg">
-        See My Projects
-      </a>
+    <!-- Modal (Lightbox) -->
+    <div
+      class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
+      x-show="modalOpen"
+      x-transition
+    >
+      <div class="bg-white dark:bg-gray-800 p-4 rounded-lg max-w-3xl w-full relative">
+        <button
+          class="absolute top-2 right-2 text-black dark:text-white text-xl font-bold"
+          @click="modalOpen = false"
+        >✕</button>
+        <img :src="modalImage" alt="Modal Image" class="w-full rounded">
+      </div>
     </div>
   </div>
 </section>
@@ -124,22 +140,115 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="py-20 bg-pink-100 dark:bg-gray-800 px-6">
-    <div class="max-w-xl mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-6">Let’s Collaborate</h2>
-      <p class="text-gray-700 dark:text-gray-300 mb-8">
-        Whether it’s building a project, designing an interface, or just chatting about tech & languages—I'm open to connecting!
-      </p>
-      <a href="mailto:alliahgabrielle@gmail.com" class="bg-pink-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-pink-700 transition">
-        Say Hello
-      </a>
+  <!-- CERTIFICATIONS -->
+<section class="py-20 bg-white dark:bg-gray-900 px-6" x-data="{ openTab: null }">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-8">Certifications</h2>
+    
+    <div class="space-y-4">
+      <div @click="openTab = openTab === 1 ? null : 1" class="cursor-pointer bg-gray-100 dark:bg-gray-700 p-4 rounded shadow hover:bg-gray-200 dark:hover:bg-gray-600 transition">
+        <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Full Stack Web Development - Codecademy</h3>
+        <div x-show="openTab === 1" class="mt-2 text-gray-700 dark:text-gray-300 transition duration-300">
+          <a href="#" class="text-blue-500 underline">View Certificate</a>
+        </div>
+      </div>
+      <div @click="openTab = openTab === 2 ? null : 2" class="cursor-pointer bg-gray-100 dark:bg-gray-700 p-4 rounded shadow hover:bg-gray-200 dark:hover:bg-gray-600 transition">
+        <h3 class="text-xl font-semibold text-gray-800 dark:text-white">UI/UX Design Specialization - Coursera</h3>
+        <div x-show="openTab === 2" class="mt-2 text-gray-700 dark:text-gray-300 transition duration-300">
+          <a href="#" class="text-blue-500 underline">View Certificate</a>
+        </div>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="py-20 bg-white dark:bg-gray-900 px-6">
+  <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-10">Client Feedback</h2>
+    <div class="grid gap-6 md:grid-cols-2">
+      <blockquote class="bg-gray-100 dark:bg-gray-700 p-6 rounded shadow">
+        <p class="text-gray-800 dark:text-gray-200 italic">"Gabi transformed our old website into a sleek, modern platform. We saw a 40% increase in engagement!"</p>
+        <footer class="mt-4 text-gray-600 dark:text-gray-400 text-sm">– Ana M., Startup Founder</footer>
+      </blockquote>
+      <blockquote class="bg-gray-100 dark:bg-gray-700 p-6 rounded shadow">
+        <p class="text-gray-800 dark:text-gray-200 italic">"Highly reliable and communicative! She delivered our React app 2 weeks ahead of schedule."</p>
+        <footer class="mt-4 text-gray-600 dark:text-gray-400 text-sm">– James L., Project Manager</footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- DOWNLOAD RESUME -->
+<section class="py-16 bg-pink-100 dark:bg-gray-800 px-6 text-center">
+  <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Want to Work Together?</h2>
+  <p class="text-lg text-gray-700 dark:text-gray-300 mb-6">Download my latest resume and let’s chat!</p>
+  <a href="/resume.pdf" download class="inline-block bg-pink-600 text-white px-6 py-3 rounded-full font-medium shadow hover:bg-pink-700 transition">
+    📄 Download Resume
+  </a>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="py-20 bg-white dark:bg-gray-900 px-6">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-10">Experience</h2>
+    <ol class="border-l-4 border-pink-500 pl-6 space-y-8">
+      <li>
+        <div class="text-pink-600 font-bold">2024 – Present</div>
+        <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Freelance Full-Stack Developer</h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm">Built interactive, accessible websites using React, Tailwind, Supabase, and Node.js.</p>
+      </li>
+      <li>
+        <div class="text-pink-600 font-bold">2022 – 2024</div>
+        <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Intern Web Developer – TUP</h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm">Worked on the university’s internal learning platform using MVC, .NET, and jQuery.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-20 bg-pink-100 dark:bg-gray-800 px-6">
+  <div class="max-w-xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Let’s Collaborate</h2>
+    <p class="text-gray-700 dark:text-gray-300 mb-8">
+      Whether it’s building a project, designing an interface, or just chatting about tech & languages — I'm open to connecting!
+    </p>
+    <a href="mailto:alliahgabrielle@gmail.com" class="bg-pink-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-pink-700 transition">
+      Say Hello
+    </a>
+
+    <!-- Social Media Links -->
+    <!-- Social Media Links Styled as Buttons with Icons -->
+<div class="mt-10 flex flex-wrap justify-center gap-4">
+  <a href="https://github.com/alliahgabrielle" target="_blank" rel="noopener"
+     class="bg-gray-800 dark:bg-gray-700 px-4 py-2 rounded-full flex items-center gap-2 hover:bg-gray-900 transition">
+    <span class="text-white font-medium">GitHub</span>
+  </a>
+
+  <a href="https://linkedin.com/in/alliahgalang" target="_blank" rel="noopener"
+     class="bg-blue-600 px-4 py-2 rounded-full flex items-center gap-2 hover:bg-blue-700 transition">
+    <span class="text-white font-medium">LinkedIn</span>
+  </a>
+
+  <a href="https://twitter.com/alliahgabriell3" target="_blank" rel="noopener"
+     class="bg-sky-500 px-4 py-2 rounded-full flex items-center gap-2 hover:bg-sky-600 transition">
+    <span class="text-white font-medium">Twitter</span>
+  </a>
+
+  <a href="https://instagram.com/alliahgabrielle_" target="_blank" rel="noopener"
+     class="bg-pink-500 px-4 py-2 rounded-full flex items-center gap-2 hover:bg-pink-600 transition">
+    <span class="text-white font-medium">Instagram</span>
+  </a>
+</div>
+
+  </div>
+</section>
+
 
   <!-- FOOTER -->
   <footer class="bg-white dark:bg-gray-900 py-6 text-center text-gray-500 text-sm">
-    &copy; 2025 Gabi | Built with 💖 and Tailwind CSS
+    &copy; 2025 Alliah Gabrielle. Crafted by yours truly.
   </footer>
 
   <!-- Dark Mode Toggle -->
