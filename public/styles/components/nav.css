@@ -238,17 +238,26 @@
 }
 
 .mobile-nav-link {
+  font-family: Lato, sans-serif;
   display: block;
-  padding: 0.75rem 1rem;
+  padding: 0.01rem 0.01rem;
   color: #1f2937;
   font-weight: 500;
   text-decoration: none;
   transition: all 0.3s ease;
   position: relative;
 }
+.mobile-nav-link:hover {
+  color: #f79939;
+  text-decoration: none;
+}
 
 .dark .mobile-nav-link {
   color: #f3f4f6;
+}
+.dark .mobile-nav-link:hover {
+  color: #ffb347;
+  text-decoration: none;
 }
 
 .mobile-nav-link::after {
