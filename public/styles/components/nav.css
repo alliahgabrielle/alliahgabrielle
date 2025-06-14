@@ -1,0 +1,205 @@
+/* ===================== */
+/* NAVIGATION COMPONENT  */
+/* ===================== */
+
+/* Base Container */
+.nav-container {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Dark Mode Container */
+.dark .nav-container {
+  background-color: rgba(31, 41, 55, 0.7);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.25);
+}
+
+/* Inner Wrapper */
+.nav-inner {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Gradient Text Base Styles */
+.gradient-text {
+  background: 
+    radial-gradient(at 71% 57%, #f79939 0px, transparent 50%),
+    radial-gradient(at 8% 65%, #bc2d57 0px, transparent 50%),
+    radial-gradient(at 69% 26%, #225894 0px, transparent 50%),
+    radial-gradient(at 82% 16%, #06242e 0px, transparent 50%),
+    radial-gradient(at 71% 86%, #e971af 0px, transparent 50%),
+    #f79939;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: all 0.3s ease;
+}
+
+.dark .gradient-text {
+  background: 
+    radial-gradient(at 71% 57%, #ffb347 0px, transparent 50%),
+    radial-gradient(at 8% 65%, #ff6b8b 0px, transparent 50%),
+    radial-gradient(at 69% 26%, #4d9feb 0px, transparent 50%),
+    radial-gradient(at 82% 16%, #0a3d62 0px, transparent 50%),
+    radial-gradient(at 71% 86%, #ff9cd9 0px, transparent 50%),
+    #ffb347;
+}
+
+/* Logo Styles */
+.nav-logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+  background: 
+    radial-gradient(at 71% 57%, #f79939 0px, transparent 50%),
+    radial-gradient(at 8% 65%, #bc2d57 0px, transparent 50%),
+    radial-gradient(at 69% 26%, #225894 0px, transparent 50%),
+    radial-gradient(at 82% 16%, #06242e 0px, transparent 50%),
+    radial-gradient(at 71% 86%, #e971af 0px, transparent 50%),
+    #f79939;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+.dark .nav-logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+  background: 
+    radial-gradient(at 71% 57%, #f79939 0px, transparent 50%),
+    radial-gradient(at 8% 65%, #bc2d57 0px, transparent 50%),
+    radial-gradient(at 69% 26%, #225894 0px, transparent 50%),
+    radial-gradient(at 82% 16%, #06242e 0px, transparent 50%),
+    radial-gradient(at 71% 86%, #e971af 0px, transparent 50%),
+    #f79939;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.nav-logo:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 8px rgba(247, 153, 57, 0.3);
+}
+
+/* Navigation Links */
+.nav-links {
+  display: none;
+  gap: 1.5rem;
+  font-weight: 500;
+}
+
+@media (min-width: 640px) {
+  .nav-links {
+    display: flex;
+  }
+}
+
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  padding: 0.5rem 0;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #f79939, #bc2d57);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after {
+  width: 100%;
+}
+
+.dark .nav-link::after {
+  background: linear-gradient(90deg, #ffb347, #ff6b8b);
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  margin-left: 1rem;
+  margin-left: 1rem;
+  padding: 0.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* Theme Icons */
+.theme-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: none;
+}
+
+/* Show moon icon by default (light mode) */
+.theme-icon.moon-icon {
+  display: block;
+}
+
+/* Show sun icon in dark mode */
+.dark .theme-icon.moon-icon {
+  display: none;
+}
+
+.dark .theme-icon.sun-icon {
+  display: block;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.theme-icon {
+  animation: fadeIn 0.3s ease;
+}
+
+/* Focus States */
+.nav-logo:focus-visible,
+.nav-link:focus-visible,
+.theme-toggle:focus-visible,
+.nav-mobile-button:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+  border-radius: 0.125rem;
+}
+
+/* Fallback for older browsers */
+@supports not (background-clip: text) {
+  .gradient-text {
+    color: #f79939;
+    background: transparent;
+  }
+  .dark .gradient-text {
+    color: #ffb347;
+  }
+}
