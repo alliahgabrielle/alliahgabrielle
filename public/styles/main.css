@@ -37,7 +37,7 @@ body {
   font-family: 'Lato', sans-serif; 
   letter-spacing: -0.02em;
   line-height: 1.2;
-  background: linear-gradient(to bottom left, #ffe4e6, #ccfbf1); 
+  background: white; 
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
