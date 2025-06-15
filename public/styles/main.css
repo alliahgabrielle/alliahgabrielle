@@ -43,10 +43,21 @@ body {
   color: transparent;
   text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
-.hero-cta{
-    font-family: 'Lato', sans-serif;
-    font-weight: 600;
-    color: #f79939; 
-    text-decoration: none;
-    transition: color 0.3s ease;
+.hero-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 15px;
+  font-weight: 300;
+  cursor: pointer;
+  outline: none;
+  -webkit-user-select: none;
+  user-select: none;
+  color: white;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  background-color: transparent;
 }
