@@ -77,24 +77,6 @@
   transition: all 0.3s ease;
   display: inline-block;
 }
-.dark .nav-logo {
-  font-family: Abril Fatface, serif;
-  font-size: 1.50rem;
-  line-height: 1.75rem;
-  background: 
-    radial-gradient(at 71% 57%, #f79939 0px, transparent 50%),
-    radial-gradient(at 8% 65%, #bc2d57 0px, transparent 50%),
-    radial-gradient(at 69% 26%, #225894 0px, transparent 50%),
-    radial-gradient(at 82% 16%, #06242e 0px, transparent 50%),
-    radial-gradient(at 71% 86%, #e971af 0px, transparent 50%),
-    #f79939;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  display: inline-block;
-}
 
 .nav-logo:hover {
   transform: scale(1.05);

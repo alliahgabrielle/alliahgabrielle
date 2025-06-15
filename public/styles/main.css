@@ -19,6 +19,7 @@ body {
 
 /* Hero Section Styles */
 .hero-title {
+  cursor: default;
   font-family: 'Abril Fatface', serif; 
   line-height: 1.2;
   background: linear-gradient(to bottom left, #ffe4e6, #ccfbf1); 
@@ -29,6 +30,7 @@ body {
   font-weight: bold;
 }
 .hero-subtitle {
+  cursor: default;
   font-family: 'Lato', sans-serif; 
   letter-spacing: -0.02em;
   line-height: 1.2;
