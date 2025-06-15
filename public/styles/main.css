@@ -1,16 +1,9 @@
 @import 'components/nav.css';
 
-:root {
-  --color-1: #f79839;
-  --color-2: hsl(342, 61%, 46%);
-  --color-3: rgb(34, 87, 148)
-  --color-4: #06242e77;
-  --color-5: #e971af;
-}
-
 body {
-  background-color: gray;
-  background-image: url('../images/background.jpg');
+  background-image: radial-gradient(
+      ellipse at left,#d97706cc,
+      #7f1d1dda, #172554d8);
   background-size: cover;
   background-clip: padding-box;
   background-position: center;
@@ -20,24 +13,7 @@ body {
 }
 
 .dark body {
-  background-color: rgba(17, 24, 39, 0.9);
-  background-blend-mode: overlay;
-}
-
-@media (max-width: 767px) {
-  body {
-    /* Replace image with gradient */
-    background-image: radial-gradient(
-      ellipse at left,#d97706cc, #7f1d1dda, #172554d8) !important; 
-    
-    -webkit-backdrop-filter: blur(12px); 
-    backdrop-filter: blur(12px); 
-  }
-}
-
-/* Dark mode adjustments */
-.dark body {
-  background-color: rgba(17, 24, 39, 0.5);
+  background-color: rgba(17, 24, 39, 0.);
   background-blend-mode: overlay;
 }
 
