@@ -80,16 +80,17 @@
 
 <!-- HERO -->
 <header id="home" class="relative min-h-screen flex items-center px-4 pt-16 overflow-hidden header-margin-top">
-  <div class="absolute inset-0 z-0 bg-gradient-layer"></div> <!-- background -->
+  <div class="absolute inset-0 z-0 bg-gradient-layer"></div>
   
-  <div class="container mx-auto flex flex-col md:flex-row items-center gap-8 relative z-10">
-    <!-- Text Content (order changes on mobile) -->
-    <div class="w-full md:w-1/2 text-right order-2 md:order-1">
+  <!-- Ultra-tight spacing on large screens -->
+  <div class="container mx-auto flex flex-col md:flex-row items-center gap-1 md:gap-10 relative z-10">
+    <!-- Text Content -->
+    <div class="w-full md:w-1/2 text-right order-2 md:order-1 md:pr-2"> <!-- Tight right padding -->
       <h1 class="hero-title text-3xl md:text-6xl lg:text-7xl">
         Hi, I'm Gab!
       </h1>
-      <hr class="my-4 w-24 border-t-1 border-white-500 ml-auto" />
-      <p class="hero-subtitle text-xs md:text-2xl lg:text-3xl mb-6">
+      <hr class="my-3 w-24 border-t-1 border-white-500 ml-auto" />
+      <p class="hero-subtitle text-xs md:text-2xl lg:text-3xl mb-4">
         Aspiring <strong>full-stack developer</strong> with a love for clean code, and
         beautiful UI. Let's create something amazing together! ♡
       </p>
@@ -100,11 +101,13 @@
       </div>
     </div>
 
-    <!-- Photo Container (order changes on mobile) -->
-    <div class="w-full md:w-1/2 flex justify-start md:justify-end order-1 md:order-2 mb-8 md:mb-0">
-      <div class="photo-container transform rotate-2 hover:rotate-3 transition-all duration-300">
-        <img src="images\herophoto.png" alt="Gab" class="photo-shadow w-full max-w-xs md:max-w-md">
-      </div>
+    <!-- Photo Container - Smaller on mobile, tight spacing on desktop -->
+    <div class="w-full md:w-1/2 flex justify-center md:justify-end order-1 md:order-2 mb-4 md:mb-0 md:pl-0">
+  <div class="photo-container transform rotate-2 hover:rotate-3 transition-all duration-300 md:-mr-40"> <!-- More aggressive pull -->
+    <img src="images/herophoto.png" alt="Gab" 
+         class="photo-shadow w-full max-w-[160px] md:max-w-[60%]"> <!-- Custom desktop width -->
+  </div>
+</div>
     </div>
   </div>
 </header>
