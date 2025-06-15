@@ -53,27 +53,34 @@
   text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 .hero-btn {
+  font-family: Lato, sans-serif;
+  font-weight: lighter;
+  border-radius: 10px;
   position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 4px 15px;
-  font-weight: 300;
   cursor: pointer;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
   outline: none;
   -webkit-user-select: none;
   user-select: none;
-  color: white;
-  border-top-width: 1px;
-  border-right-width: 1px;
-  border-bottom-width: 1px;
-  border-left-width: 1px;
-  background-color: transparent;
 }
+.hero-btn:hover {
+  background: rgba(0, 0, 0, 0.13);
+  border-color: rgba(255, 255, 255, 1);
+}
+
   .photo-shadow {
     box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.2),
                 6px 6px 12px rgba(0, 0, 0, 0.15),
-                0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+                0 0 0 1px rgba(211, 86, 86, 0.1) inset;
     transform: perspective(1000px) rotateY(-5deg) rotateX(2deg);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
   }
