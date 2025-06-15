@@ -28,7 +28,7 @@ body {
   body {
     /* Replace image with gradient */
     background-image: radial-gradient(
-      ellipse at left,#d97706c5, #7f1d1d98, #172554c0) !important; 
+      ellipse at left,#d97706cc, #7f1d1dda, #172554d8) !important; 
     
     -webkit-backdrop-filter: blur(12px); 
     backdrop-filter: blur(12px); 
