@@ -119,48 +119,65 @@
 
 
   <!-- PROJECTS -->
-<section id="projects" class="py-20 bg-white dark:bg-gray-900 px-6">
+<section id="projects" class="py-20 bg-white dark:bg-gray-900 px-4 sm:px-6">
   <div class="max-w-6xl mx-auto">
     <h2 class="text-3xl font-bold text-center mb-12">Featured Projects</h2>
     
     <!-- Projects Container -->
-    <div class="relative h-[400px]">
-      <!-- Navigation Arrows -->
-      <button id="prev-btn" class="absolute -left-12 top-1/2 -translate-y-1/2 bg-white dark:bg-gray-800 shadow-md rounded-full w-10 h-10 flex items-center justify-center text-pink-600 hover:text-pink-800 z-10 transition-all">
+    <div class="relative h-[300px] sm:h-[400px] mb-12 sm:mb-0">
+      <!-- Desktop Navigation Arrows -->
+      <button id="prev-btn-desktop" class="hidden sm:block absolute -left-12 top-1/2 -translate-y-1/2 bg-white dark:bg-gray-800 shadow-md rounded-full w-10 h-10 flex items-center justify-center text-pink-600 hover:text-pink-800 z-10 transition-all">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
         </svg>
       </button>
       
-      <button id="next-btn" class="absolute -right-12 top-1/2 -translate-y-1/2 bg-white dark:bg-gray-800 shadow-md rounded-full w-10 h-10 flex items-center justify-center text-pink-600 hover:text-pink-800 z-10 transition-all">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-        </svg>
-      </button>
-
       <!-- Projects Carousel -->
       <div id="project-carousel" class="h-full flex items-center justify-center relative">
         <!-- Projects will be inserted here by JavaScript -->
       </div>
+
+      <!-- Desktop Navigation Arrows -->
+      <button id="next-btn-desktop" class="hidden sm:block absolute -right-12 top-1/2 -translate-y-1/2 bg-white dark:bg-gray-800 shadow-md rounded-full w-10 h-10 flex items-center justify-center text-pink-600 hover:text-pink-800 z-10 transition-all">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Arrows -->
+    <div class="flex justify-center gap-4 sm:hidden">
+      <button id="prev-btn-mobile" class="bg-white dark:bg-gray-800 shadow-md rounded-full w-10 h-10 flex items-center justify-center text-pink-600 hover:text-pink-800 transition-all">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+      </button>
+      
+      <button id="next-btn-mobile" class="bg-white dark:bg-gray-800 shadow-md rounded-full w-10 h-10 flex items-center justify-center text-pink-600 hover:text-pink-800 transition-all">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </button>
     </div>
   </div>
 
   <!-- Project Modal -->
-  <div id="project-modal" class="fixed inset-0 bg-black/80 z-50 hidden items-center justify-center p-4">
-    <div class="bg-white dark:bg-gray-800 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative mx-auto my-auto">
+  <div id="project-modal" class="fixed inset-0 bg-black/80 z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white dark:bg-gray-800 rounded-xl w-full max-w-4xl max-h-[90vh] overflow-y-auto relative mx-4 my-auto">
+      <!-- Close button inside modal -->
       <button id="close-modal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
         </svg>
       </button>
       
-      <div class="p-8">
-        <h3 id="modal-title" class="text-2xl font-bold mb-4 text-center"></h3>
-        <img id="modal-image" class="w-full rounded-lg mb-6 aspect-[3/2] object-cover">
-        <p id="modal-description" class="text-gray-700 dark:text-gray-300 mb-4"></p>
-        <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg">
-          <h4 class="font-semibold mb-2">Technologies Used:</h4>
-          <p id="modal-tech"></p>
+      <div class="p-6 sm:p-8">
+        <h3 id="modal-title" class="text-xl sm:text-2xl font-bold mb-4 text-center"></h3>
+        <img id="modal-image" class="w-full rounded-lg mb-4 sm:mb-6 aspect-[3/2] object-cover">
+        <p id="modal-description" class="text-sm sm:text-base text-gray-700 dark:text-gray-300 mb-4"></p>
+        <div class="bg-gray-100 dark:bg-gray-700 p-3 sm:p-4 rounded-lg">
+          <h4 class="font-semibold text-sm sm:text-base mb-2">Technologies Used:</h4>
+          <p id="modal-tech" class="text-sm sm:text-base"></p>
         </div>
       </div>
     </div>
@@ -169,7 +186,7 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    // Project data with updated image names
+    // Project data with corrected image paths
     const projects = [
       {
         id: 1,
@@ -217,8 +234,10 @@
 
     // DOM elements
     const carousel = document.getElementById('project-carousel');
-    const prevBtn = document.getElementById('prev-btn');
-    const nextBtn = document.getElementById('next-btn');
+    const prevBtnMobile = document.getElementById('prev-btn-mobile');
+    const nextBtnMobile = document.getElementById('next-btn-mobile');
+    const prevBtnDesktop = document.getElementById('prev-btn-desktop');
+    const nextBtnDesktop = document.getElementById('next-btn-desktop');
     const modal = document.getElementById('project-modal');
     const modalTitle = document.getElementById('modal-title');
     const modalImage = document.getElementById('modal-image');
@@ -229,6 +248,7 @@
     // Carousel state
     let currentIndex = 0;
     const visibleProjects = 5;
+    let isMobile = window.innerWidth < 640;
 
     // Initialize carousel
     function initCarousel() {
@@ -241,10 +261,15 @@
         
         const projectEl = document.createElement('div');
         projectEl.className = `project-item absolute transition-all duration-500 ${getPositionClass(i)}`;
+        
+        // Mobile vs desktop sizes
+        const titleSize = isMobile ? 'text-sm' : 'text-lg';
+        const imgClass = isMobile ? 'h-[180px]' : 'h-full';
+        
         projectEl.innerHTML = `
           <div class="relative cursor-pointer group" data-id="${project.id}">
-            <img src="${project.image}" alt="${project.title}" class="w-full h-full object-cover rounded-lg aspect-[3/2] transition-all duration-300 ${i === 0 ? '' : 'filter blur-sm brightness-90'}">
-            <div class="absolute bottom-2 left-2 text-white font-semibold text-lg drop-shadow-lg">${project.title}</div>
+            <img src="${project.image}" alt="${project.title}" class="w-full ${imgClass} object-cover rounded-lg aspect-[3/2] transition-all duration-300 ${i === 0 ? '' : 'filter blur-sm brightness-90'}">
+            <div class="absolute bottom-2 left-2 text-white font-semibold ${titleSize} drop-shadow-lg">${project.title}</div>
             <div class="absolute inset-0 bg-black/30 ${i === 0 ? 'group-hover:bg-black/0' : ''} transition-all duration-300 rounded-lg"></div>
           </div>
         `;
@@ -256,38 +281,37 @@
 
     // Get position class based on index offset
     function getPositionClass(offset) {
-      const baseWidth = 30; // Base width percentage
-      const scaleStep = 0.1; // Scale difference between steps
-      const zIndexStep = 10; // Z-index difference between steps
+      const baseWidth = isMobile ? 40 : 30;
+      const scaleStep = isMobile ? 0.15 : 0.1;
+      const rotation = isMobile ? 8 : 12;
       
       switch(offset) {
         case -2: 
-          return `left-0 w-[${baseWidth}%] scale-75 -rotate-12 z-0 opacity-70`;
+          return `left-0 w-[${baseWidth}%] scale-75 -rotate-[${rotation}deg] z-0 opacity-70`;
         case -1: 
-          return `left-[15%] w-[${baseWidth}%] scale-85 -rotate-6 z-10 opacity-80`;
+          return `left-[15%] w-[${baseWidth}%] scale-85 -rotate-[${rotation/2}deg] z-10 opacity-80`;
         case 0: 
-          return `left-1/2 -translate-x-1/2 w-[${baseWidth + 5}%] scale-100 z-20`;
+          return `left-1/2 -translate-x-1/2 w-[${baseWidth + (isMobile ? 10 : 5)}%] scale-100 z-20`;
         case 1: 
-          return `right-[15%] w-[${baseWidth}%] scale-85 rotate-6 z-10 opacity-80`;
+          return `right-[15%] w-[${baseWidth}%] scale-85 rotate-[${rotation/2}deg] z-10 opacity-80`;
         case 2: 
-          return `right-0 w-[${baseWidth}%] scale-75 rotate-12 z-0 opacity-70`;
+          return `right-0 w-[${baseWidth}%] scale-75 rotate-[${rotation}deg] z-0 opacity-70`;
         default: return '';
       }
     }
 
-    // Navigate to next project
+    // Navigation functions
     function nextProject() {
       currentIndex = (currentIndex + 1) % projects.length;
       initCarousel();
     }
 
-    // Navigate to previous project
     function prevProject() {
       currentIndex = (currentIndex - 1 + projects.length) % projects.length;
       initCarousel();
     }
 
-    // Open modal with project details
+    // Modal functions
     function openModal(index) {
       const project = projects[index];
       modalTitle.textContent = project.title;
@@ -299,15 +323,17 @@
       document.body.style.overflow = 'hidden';
     }
 
-    // Close modal
     function closeModalHandler() {
       modal.classList.add('hidden');
       document.body.style.overflow = '';
     }
 
-    // Event listeners
-    prevBtn.addEventListener('click', prevProject);
-    nextBtn.addEventListener('click', nextProject);
+    // Event listeners for both mobile and desktop buttons
+    prevBtnMobile.addEventListener('click', prevProject);
+    nextBtnMobile.addEventListener('click', nextProject);
+    prevBtnDesktop.addEventListener('click', prevProject);
+    nextBtnDesktop.addEventListener('click', nextProject);
+    
     closeModal.addEventListener('click', closeModalHandler);
     modal.addEventListener('click', (e) => {
       if (e.target === modal) closeModalHandler();
@@ -318,6 +344,12 @@
       if (e.key === 'ArrowLeft') prevProject();
       if (e.key === 'ArrowRight') nextProject();
       if (e.key === 'Escape') closeModalHandler();
+    });
+
+    // Handle window resize
+    window.addEventListener('resize', function() {
+      isMobile = window.innerWidth < 640;
+      initCarousel();
     });
 
     // Initialize
@@ -332,13 +364,24 @@
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   }
   
-  /* Hover effect for center project */
+  /* Mobile adjustments */
+  @media (max-width: 640px) {
+    .project-item {
+      height: 70%;
+    }
+    
+    #project-modal > div {
+      width: 95%;
+      max-height: 85vh;
+    }
+  }
+  
+  /* Hover effects */
   .project-item:nth-child(3):hover {
     transform: translateX(-50%) scale(1.1) !important;
     z-index: 30 !important;
   }
   
-  /* Hover effect for other projects */
   .project-item:not(:nth-child(3)):hover {
     transform: scale(0.9) !important;
     z-index: 15 !important;
@@ -350,12 +393,6 @@
   
   .project-item:hover img {
     filter: blur(0) brightness(100%) !important;
-  }
-  
-  /* Modal centering */
-  #project-modal > div {
-    position: relative;
-    margin: auto;
   }
 </style>
 
