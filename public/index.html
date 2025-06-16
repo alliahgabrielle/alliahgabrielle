@@ -152,13 +152,13 @@
 
   <!-- Project Modal -->
   <div id="project-modal" class="fixed inset-0 bg-black/80 z-50 hidden flex items-center justify-center p-4">
-    <div class="bg-white dark:bg-gray-800 rounded-xl w-full max-w-4xl max-h-[90vh] overflow-y-auto relative mx-4 my-auto">
-      <!-- Close button inside modal -->
-      <button id="close-modal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300" aria-label="Close modal">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-        </svg>
-      </button>
+  <div class="bg-white dark:bg-gray-800 rounded-xl w-full max-w-4xl max-h-[90vh] overflow-y-auto relative mx-4 my-auto">
+    <!-- Close button inside modal -->
+    <button id="close-modal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300" aria-label="Close modal">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
       
       <div class="p-6 sm:p-8">
         <h3 id="modal-title" class="text-xl sm:text-2xl font-bold mb-4 text-center"></h3>
@@ -312,11 +312,20 @@
       modal.classList.remove('hidden');
       document.body.style.overflow = 'hidden';
     }
-
+    
     function closeModalHandler() {
       modal.classList.add('hidden');
       document.body.style.overflow = '';
     }
+    closeModal.addEventListener('click', function() {
+      closeModalHandler();
+    });
+
+    window.addEventListener('click', (e) => {
+    if (e.target === modal) {  // Check if the clicked element is the modal background
+      closeModalHandler();  // Close the modal if it's the background
+    }
+  })
 
   // Event listeners to use these single buttons
   const prevBtn = document.getElementById('prev-btn');
@@ -342,71 +351,6 @@
     initCarousel();
   });
 </script>
-
-<!-- ABOUT ME -->
-<section id="about" class="project-title py-20 bg-pink-50 dark:bg-gray-800 px-6" x-data="{ modalOpen: false, modalImage: '' }">
-  <div class="max-w-5xl mx-auto">
-    <div class="text-center mb-12">
-      <h2 class="project-title dark:text-white">
-        About Me
-      </h2>
-      <h1 class="project-subtitle dark:text-white">
-        I'm Alliah Gabrielle, or <strong>Gab</strong> for short.
-        A passionate full-stack developer from the Philippines,
-        currently pursuing a degree in Computer Science at TUP
-        Manila. I love creating interactive, accessible web applications
-        and exploring new technologies. When I'm not coding, you can find me
-        journaling, learning languages, or enjoying a good book.
-      </h1>
-    </div>
-
-    <!-- Hobby Cards -->
-    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-      <!-- Hobby Card -->
-      <div
-        class="bg-white dark:bg-gray-700 rounded-xl shadow-lg p-4 transform hover:scale-105 transition duration-300 cursor-pointer"
-        @click="modalOpen = true; modalImage = 'public/images/coding.jpg'"
-      >
-        <img src="public/images/coding.jpg" alt="Coding" class="w-full h-40 object-cover rounded-md mb-4">
-        <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Web Development</h3>
-        <p class="text-gray-600 dark:text-gray-300 text-sm">Turning designs and ideas into beautiful web applications.</p>
-      </div>
-
-      <div
-        class="bg-white dark:bg-gray-700 rounded-xl shadow-lg p-4 transform hover:scale-105 transition duration-300 cursor-pointer"
-        @click="modalOpen = true; modalImage = 'public/images/journaling.jpg'"
-      >
-        <img src="public/images/journaling.jpg" alt="Journaling" class="w-full h-40 object-cover rounded-md mb-4">
-        <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Journaling</h3>
-        <p class="text-gray-600 dark:text-gray-300 text-sm">Writing thoughts, gratitude, and tracking habits with intention.</p>
-      </div>
-
-      <div
-        class="bg-white dark:bg-gray-700 rounded-xl shadow-lg p-4 transform hover:scale-105 transition duration-300 cursor-pointer"
-        @click="modalOpen = true; modalImage = 'public/images/languages.jpg'"
-      >
-        <img src="public/images/languages.jpg" alt="Languages" class="w-full h-40 object-cover rounded-md mb-4">
-        <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Language Learning</h3>
-        <p class="text-gray-600 dark:text-gray-300 text-sm">Studying Korean and Japanese as a passion project.</p>
-      </div>
-    </div>
-
-    <!-- Modal (Lightbox) -->
-    <div
-      class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
-      x-show="modalOpen"
-      x-transition
-    >
-      <div class="bg-white dark:bg-gray-800 p-4 rounded-lg max-w-3xl w-full relative">
-        <button
-          class="absolute top-2 right-2 text-black dark:text-white text-xl font-bold"
-          @click="modalOpen = false"
-        >✕</button>
-        <img :src="modalImage" alt="Modal Image" class="w-full rounded">
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- EXPERIENCE -->
 <section class="py-20 bg-white dark:bg-gray-900 px-6">
