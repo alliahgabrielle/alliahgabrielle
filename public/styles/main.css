@@ -148,8 +148,6 @@
   margin-top: 5rem; /* Space above the title */
   letter-spacing: 0.5px;
 }
-
-/* Project Subtitle */
 .project-subtitle {
   font-family: Lato, sans-serif; /* Use a sans-serif font for a clean subtitle */
   font-size: 1.125rem; /* Slightly smaller than the title */
@@ -163,7 +161,6 @@
   margin-bottom: 5rem; /* Space below the subtitle */
   padding: 0 1.5rem; /* Add padding to prevent text from touching the edges */
 }
-/* Responsive Design */
 @media screen and (max-width: 768px) {
   .project-title {
     font-size: 1.5rem; /* Slightly smaller on smaller screens */
