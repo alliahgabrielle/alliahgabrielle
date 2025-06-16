@@ -119,34 +119,245 @@
 
 
   <!-- PROJECTS -->
-  <section id="projects" class="py-20 bg-white dark:bg-gray-900 px-6">
-    <div class="max-w-6xl mx-auto">
-      <h2 class="text-3xl font-bold text-center mb-12">Featured Projects</h2>
-      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        <!-- Project Card -->
-        <div class="bg-gray-100 dark:bg-gray-800 rounded-xl shadow p-6 flex flex-col hover:shadow-lg transition">
-          <img src="https://via.placeholder.com/400x200?text=Portfolio+Site" alt="Project 1" class="rounded-md mb-4">
-          <h3 class="text-xl font-semibold mb-2">Portfolio Website</h3>
-          <p class="text-gray-600 dark:text-gray-300 flex-grow">A fully responsive portfolio built with React and Tailwind showcasing my development journey.</p>
-          <a href="#" class="mt-4 text-pink-600 hover:underline font-medium">View Project →</a>
-        </div>
+<section id="projects" class="py-20 bg-white dark:bg-gray-900 px-6">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-12">Featured Projects</h2>
+    
+    <!-- Projects Container -->
+    <div class="relative h-[400px]">
+      <!-- Navigation Arrows -->
+      <button id="prev-btn" class="absolute -left-12 top-1/2 -translate-y-1/2 bg-white dark:bg-gray-800 shadow-md rounded-full w-10 h-10 flex items-center justify-center text-pink-600 hover:text-pink-800 z-10 transition-all">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+      </button>
+      
+      <button id="next-btn" class="absolute -right-12 top-1/2 -translate-y-1/2 bg-white dark:bg-gray-800 shadow-md rounded-full w-10 h-10 flex items-center justify-center text-pink-600 hover:text-pink-800 z-10 transition-all">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </button>
 
-        <div class="bg-gray-100 dark:bg-gray-800 rounded-xl shadow p-6 flex flex-col hover:shadow-lg transition">
-          <img src="https://via.placeholder.com/400x200?text=E-Learning+System" alt="Project 2" class="rounded-md mb-4">
-          <h3 class="text-xl font-semibold mb-2">E-Learning System</h3>
-          <p class="text-gray-600 dark:text-gray-300 flex-grow">An online platform to teach and test code knowledge with rubric-based evaluation.</p>
-          <a href="#" class="mt-4 text-pink-600 hover:underline font-medium">View Project →</a>
-        </div>
+      <!-- Projects Carousel -->
+      <div id="project-carousel" class="h-full flex items-center justify-center relative">
+        <!-- Projects will be inserted here by JavaScript -->
+      </div>
+    </div>
+  </div>
 
-        <div class="bg-gray-100 dark:bg-gray-800 rounded-xl shadow p-6 flex flex-col hover:shadow-lg transition">
-          <img src="https://via.placeholder.com/400x200?text=Vocab+App" alt="Project 3" class="rounded-md mb-4">
-          <h3 class="text-xl font-semibold mb-2">Korean Vocabulary App</h3>
-          <p class="text-gray-600 dark:text-gray-300 flex-grow">An app for memorizing Korean vocabulary using flashcards, quizzes, and folders.</p>
-          <a href="#" class="mt-4 text-pink-600 hover:underline font-medium">View Project →</a>
+  <!-- Project Modal -->
+  <div id="project-modal" class="fixed inset-0 bg-black/80 z-50 hidden items-center justify-center p-4">
+    <div class="bg-white dark:bg-gray-800 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative mx-auto my-auto">
+      <button id="close-modal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+      
+      <div class="p-8">
+        <h3 id="modal-title" class="text-2xl font-bold mb-4 text-center"></h3>
+        <img id="modal-image" class="w-full rounded-lg mb-6 aspect-[3/2] object-cover">
+        <p id="modal-description" class="text-gray-700 dark:text-gray-300 mb-4"></p>
+        <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg">
+          <h4 class="font-semibold mb-2">Technologies Used:</h4>
+          <p id="modal-tech"></p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Project data with updated image names
+    const projects = [
+      {
+        id: 1,
+        title: "Portfolio Website",
+        image: "images/proj1.jpg",
+        description: "A fully responsive portfolio built with React and Tailwind showcasing my development journey.",
+        tech: "React, Tailwind CSS, Vite"
+      },
+      {
+        id: 2,
+        title: "E-Learning System",
+        image: "images/proj2.jpg",
+        description: "An online platform to teach and test code knowledge with rubric-based evaluation.",
+        tech: "Node.js, MongoDB, React"
+      },
+      {
+        id: 3,
+        title: "Korean Vocabulary App",
+        image: "images/proj3.jpg",
+        description: "An app for memorizing Korean vocabulary using flashcards, quizzes, and folders.",
+        tech: "Flutter, Firebase, Dart"
+      },
+      {
+        id: 4,
+        title: "E-Commerce Platform",
+        image: "images/proj4.jpg",
+        description: "A full-featured online store with product listings and payment integration.",
+        tech: "React, Node.js, Stripe"
+      },
+      {
+        id: 5,
+        title: "Weather Dashboard",
+        image: "images/proj5.jpg",
+        description: "Real-time weather forecasting application with interactive maps.",
+        tech: "JavaScript, API Integration"
+      },
+      {
+        id: 6,
+        title: "Task Manager",
+        image: "images/proj6.jpg",
+        description: "Productivity application for organizing daily tasks and projects.",
+        tech: "React, Firebase"
+      }
+    ];
+
+    // DOM elements
+    const carousel = document.getElementById('project-carousel');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const modal = document.getElementById('project-modal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalImage = document.getElementById('modal-image');
+    const modalDescription = document.getElementById('modal-description');
+    const modalTech = document.getElementById('modal-tech');
+    const closeModal = document.getElementById('close-modal');
+
+    // Carousel state
+    let currentIndex = 0;
+    const visibleProjects = 5;
+
+    // Initialize carousel
+    function initCarousel() {
+      carousel.innerHTML = '';
+      
+      // Create project elements
+      for (let i = -2; i <= 2; i++) {
+        const projectIndex = (currentIndex + i + projects.length) % projects.length;
+        const project = projects[projectIndex];
+        
+        const projectEl = document.createElement('div');
+        projectEl.className = `project-item absolute transition-all duration-500 ${getPositionClass(i)}`;
+        projectEl.innerHTML = `
+          <div class="relative cursor-pointer group" data-id="${project.id}">
+            <img src="${project.image}" alt="${project.title}" class="w-full h-full object-cover rounded-lg aspect-[3/2] transition-all duration-300 ${i === 0 ? '' : 'filter blur-sm brightness-90'}">
+            <div class="absolute bottom-2 left-2 text-white font-semibold text-lg drop-shadow-lg">${project.title}</div>
+            <div class="absolute inset-0 bg-black/30 ${i === 0 ? 'group-hover:bg-black/0' : ''} transition-all duration-300 rounded-lg"></div>
+          </div>
+        `;
+        
+        projectEl.querySelector('div').addEventListener('click', () => openModal(projectIndex));
+        carousel.appendChild(projectEl);
+      }
+    }
+
+    // Get position class based on index offset
+    function getPositionClass(offset) {
+      const baseWidth = 30; // Base width percentage
+      const scaleStep = 0.1; // Scale difference between steps
+      const zIndexStep = 10; // Z-index difference between steps
+      
+      switch(offset) {
+        case -2: 
+          return `left-0 w-[${baseWidth}%] scale-75 -rotate-12 z-0 opacity-70`;
+        case -1: 
+          return `left-[15%] w-[${baseWidth}%] scale-85 -rotate-6 z-10 opacity-80`;
+        case 0: 
+          return `left-1/2 -translate-x-1/2 w-[${baseWidth + 5}%] scale-100 z-20`;
+        case 1: 
+          return `right-[15%] w-[${baseWidth}%] scale-85 rotate-6 z-10 opacity-80`;
+        case 2: 
+          return `right-0 w-[${baseWidth}%] scale-75 rotate-12 z-0 opacity-70`;
+        default: return '';
+      }
+    }
+
+    // Navigate to next project
+    function nextProject() {
+      currentIndex = (currentIndex + 1) % projects.length;
+      initCarousel();
+    }
+
+    // Navigate to previous project
+    function prevProject() {
+      currentIndex = (currentIndex - 1 + projects.length) % projects.length;
+      initCarousel();
+    }
+
+    // Open modal with project details
+    function openModal(index) {
+      const project = projects[index];
+      modalTitle.textContent = project.title;
+      modalImage.src = project.image;
+      modalImage.alt = project.title;
+      modalDescription.textContent = project.description;
+      modalTech.textContent = project.tech;
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    // Close modal
+    function closeModalHandler() {
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    // Event listeners
+    prevBtn.addEventListener('click', prevProject);
+    nextBtn.addEventListener('click', nextProject);
+    closeModal.addEventListener('click', closeModalHandler);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModalHandler();
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') prevProject();
+      if (e.key === 'ArrowRight') nextProject();
+      if (e.key === 'Escape') closeModalHandler();
+    });
+
+    // Initialize
+    initCarousel();
+  });
+</script>
+
+<style>
+  .project-item {
+    height: 80%;
+    transform-origin: center;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  /* Hover effect for center project */
+  .project-item:nth-child(3):hover {
+    transform: translateX(-50%) scale(1.1) !important;
+    z-index: 30 !important;
+  }
+  
+  /* Hover effect for other projects */
+  .project-item:not(:nth-child(3)):hover {
+    transform: scale(0.9) !important;
+    z-index: 15 !important;
+  }
+  
+  .project-item img {
+    transition: all 0.3s ease;
+  }
+  
+  .project-item:hover img {
+    filter: blur(0) brightness(100%) !important;
+  }
+  
+  /* Modal centering */
+  #project-modal > div {
+    position: relative;
+    margin: auto;
+  }
+</style>
 
 <!-- ABOUT ME -->
 <section id="about" class="py-20 bg-pink-50 dark:bg-gray-800 px-6" x-data="{ modalOpen: false, modalImage: '' }">
