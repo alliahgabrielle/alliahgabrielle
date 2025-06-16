@@ -97,3 +97,83 @@
       transform: perspective(1000px) rotateY(-3deg) rotateX(1deg);
     }
   }
+
+  /* Project Section Styles */
+  .project-item {
+    height: 80%;
+    transform-origin: center;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  /* Mobile adjustments */
+  @media (max-width: 640px) {
+    .project-item {
+      height: 70%;
+      margin-bottom: -1rem;
+    }
+    
+    #project-modal > div {
+      width: 95%;
+      max-height: 85vh;
+    }
+  }
+  
+  /* Hover effects */
+  .project-item:nth-child(3):hover {
+    transform: translateX(-50%) scale(1.1) !important;
+    z-index: 30 !important;
+  }
+  
+  .project-item:not(:nth-child(3)):hover {
+    transform: scale(0.9) !important;
+    z-index: 15 !important;
+  }
+  
+  .project-item img {
+    transition: all 0.3s ease;
+  }
+  
+  .project-item:hover img {
+    filter: blur(0) brightness(100%) !important;
+  }
+  /* Project Title */
+.project-title {
+  font-family: 'Abril Fatface', serif; /* Use a serif font for a bold title */
+  color: #333; /* Darker color for better contrast */
+  font-size: 2.25rem; /* Large title */
+  font-weight: 700; /* Bold */
+  text-align: center;
+  margin-bottom: 0.2rem; /* Space below the title */
+  margin-top: 5rem; /* Space above the title */
+  letter-spacing: 0.5px;
+}
+
+/* Project Subtitle */
+.project-subtitle {
+  font-family: Lato, sans-serif; /* Use a sans-serif font for a clean subtitle */
+  font-size: 1.125rem; /* Slightly smaller than the title */
+  text-align: center;
+  color: #555; /* Slightly lighter text color for the subtitle */
+  margin-bottom: 2rem; /* Space below the subtitle */
+  line-height: 1.75; /* Line height for readability */
+  max-width: 800px; /* Maximum width for better text wrapping */
+  margin-left: auto;
+  margin-right: auto; /* Center the subtitle */
+  margin-bottom: 5rem; /* Space below the subtitle */
+  padding: 0 1.5rem; /* Add padding to prevent text from touching the edges */
+}
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .project-title {
+    font-size: 1.5rem; /* Slightly smaller on smaller screens */
+    margin-bottom: 0.8rem; /* Adjust space below the subtitle */
+    margin-top: 2rem;
+  }
+  
+  .project-subtitle {
+    font-size: 0.65rem; /* Make the subtitle smaller on mobile */
+    line-height: 0.85rem; /* Adjust line height for better readability */
+    margin-bottom: 0.8rem; /* Adjust space below the subtitle */
+    padding: 0 .8rem; /* Reduce padding on smaller screens */
+  }
+}

@@ -121,7 +121,10 @@
   <!-- PROJECTS -->
 <section id="projects" class="py-20 bg-white dark:bg-gray-900 px-4 sm:px-6">
   <div class="max-w-6xl mx-auto">
-    <h2 class="text-3xl font-bold text-center mb-12">Featured Projects</h2>
+    <h2 class="project-title dark:text-white">Featured Projects</h2>
+    <h1 class="project-subtitle dark:text-white">Here’s a showcase of projects that highlight my passion for coding and design.
+      Click each project to learn more about the works and technologies behind them!
+    </h1>
     
     <!-- Projects Container -->
     <div class="relative h-[300px] sm:h-[400px] mb-12 sm:mb-0">
@@ -184,6 +187,7 @@
   </div>
 </section>
 
+<!-- JavaScript for Projects  -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     // Project data with corrected image paths
@@ -356,45 +360,6 @@
     initCarousel();
   });
 </script>
-
-<style>
-  .project-item {
-    height: 80%;
-    transform-origin: center;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  
-  /* Mobile adjustments */
-  @media (max-width: 640px) {
-    .project-item {
-      height: 70%;
-    }
-    
-    #project-modal > div {
-      width: 95%;
-      max-height: 85vh;
-    }
-  }
-  
-  /* Hover effects */
-  .project-item:nth-child(3):hover {
-    transform: translateX(-50%) scale(1.1) !important;
-    z-index: 30 !important;
-  }
-  
-  .project-item:not(:nth-child(3)):hover {
-    transform: scale(0.9) !important;
-    z-index: 15 !important;
-  }
-  
-  .project-item img {
-    transition: all 0.3s ease;
-  }
-  
-  .project-item:hover img {
-    filter: blur(0) brightness(100%) !important;
-  }
-</style>
 
 <!-- ABOUT ME -->
 <section id="about" class="py-20 bg-pink-50 dark:bg-gray-800 px-6" x-data="{ modalOpen: false, modalImage: '' }">
