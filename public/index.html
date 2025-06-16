@@ -122,47 +122,33 @@
 <section id="projects" class="py-20 bg-white dark:bg-gray-900 px-4 sm:px-6">
   <div class="max-w-6xl mx-auto">
     <h2 class="project-title dark:text-white">Featured Projects</h2>
-    <h1 class="project-subtitle dark:text-white">Here’s a showcase of projects that highlight my passion for coding and design.
+    <h1 class="project-subtitle dark:text-white">
+      Here’s a showcase of projects that highlight my passion for coding and design.
       Click each project to learn more about the works and technologies behind them!
     </h1>
     
-    <!-- Projects Container -->
-    <div class="relative h-[300px] sm:h-[400px] mb-12 sm:mb-0">
-      <!-- Desktop Navigation Arrows -->
-      <button id="prev-btn-desktop" class="hidden sm:block absolute -left-12 top-1/2 -translate-y-1/2 bg-white dark:bg-gray-800 shadow-md rounded-full w-10 h-10 flex items-center justify-center text-pink-600 hover:text-pink-800 z-10 transition-all" aria-label="Previous project">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
-        </svg>
-      </button>
-      
-      <!-- Projects Carousel -->
-      <div id="project-carousel" class="h-full flex items-center justify-center relative">
-        <!-- Projects will be inserted here by JavaScript -->
-      </div>
-
-      <!-- Desktop Navigation Arrows -->
-      <button id="next-btn-desktop" class="hidden sm:block absolute -right-12 top-1/2 -translate-y-1/2 bg-white dark:bg-gray-800 shadow-md rounded-full w-10 h-10 flex items-center justify-center text-pink-600 hover:text-pink-800 z-10 transition-all" aria-label="Next project">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-        </svg>
-      </button>
-    </div>
-
-    <!-- Mobile Navigation Arrows -->
-    <div class="flex justify-center gap-4 sm:hidden">
-      <button id="prev-btn-mobile" class="bg-white dark:bg-gray-800 shadow-md rounded-full w-10 h-10 flex items-center justify-center text-pink-600 hover:text-pink-800 transition-all" aria-label="Previous project">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
-        </svg>
-      </button>
-      
-      <button id="next-btn-mobile" class="bg-white dark:bg-gray-800 shadow-md rounded-full w-10 h-10 flex items-center justify-center text-pink-600 hover:text-pink-800 transition-all" aria-label="Next project">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-        </svg>
-      </button>
-    </div>
+<!-- Projects Container -->
+<div class="relative h-[300px] sm:h-[400px] mb-4">
+  <!-- Projects Carousel -->
+  <div id="project-carousel" class="h-full flex items-center justify-center relative">
+    <!-- Projects will be inserted here by JavaScript -->
   </div>
+</div>
+
+<!-- Navigation Arrows - Below carousel for all screen sizes -->
+<div class="flex justify-center gap-4 mt-4">
+  <button id="prev-btn" class="bg-white dark:bg-gray-800 shadow-md rounded-full w-10 h-10 flex items-center justify-center text-pink-600 hover:text-pink-800 transition-all" aria-label="Previous project">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+    </svg>
+  </button>
+  
+  <button id="next-btn" class="bg-white dark:bg-gray-800 shadow-md rounded-full w-10 h-10 flex items-center justify-center text-pink-600 hover:text-pink-800 transition-all" aria-label="Next project">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+    </svg>
+  </button>
+</div>
 
   <!-- Project Modal -->
   <div id="project-modal" class="fixed inset-0 bg-black/80 z-50 hidden flex items-center justify-center p-4">
@@ -332,16 +318,12 @@
       document.body.style.overflow = '';
     }
 
-    // Event listeners for both mobile and desktop buttons
-    prevBtnMobile.addEventListener('click', prevProject);
-    nextBtnMobile.addEventListener('click', nextProject);
-    prevBtnDesktop.addEventListener('click', prevProject);
-    nextBtnDesktop.addEventListener('click', nextProject);
-    
-    closeModal.addEventListener('click', closeModalHandler);
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) closeModalHandler();
-    });
+  // Event listeners to use these single buttons
+  const prevBtn = document.getElementById('prev-btn');
+  const nextBtn = document.getElementById('next-btn');
+
+  prevBtn.addEventListener('click', prevProject);
+  nextBtn.addEventListener('click', nextProject);
 
     // Keyboard navigation
     document.addEventListener('keydown', (e) => {
@@ -362,18 +344,20 @@
 </script>
 
 <!-- ABOUT ME -->
-<section id="about" class="py-20 bg-pink-50 dark:bg-gray-800 px-6" x-data="{ modalOpen: false, modalImage: '' }">
+<section id="about" class="project-title py-20 bg-pink-50 dark:bg-gray-800 px-6" x-data="{ modalOpen: false, modalImage: '' }">
   <div class="max-w-5xl mx-auto">
     <div class="text-center mb-12">
-      <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">About Me</h2>
-      <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed max-w-3xl mx-auto">
+      <h2 class="project-title dark:text-white">
+        About Me
+      </h2>
+      <h1 class="project-subtitle dark:text-white">
         I'm Alliah Gabrielle, or <strong>Gab</strong> for short.
         A passionate full-stack developer from the Philippines,
         currently pursuing a degree in Computer Science at TUP
         Manila. I love creating interactive, accessible web applications
         and exploring new technologies. When I'm not coding, you can find me
         journaling, learning languages, or enjoying a good book.
-      </p>
+      </h1>
     </div>
 
     <!-- Hobby Cards -->
