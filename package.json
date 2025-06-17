@@ -6,8 +6,11 @@
     "build": "tailwindcss -i ./input.css -o ./public/output.css --minify"
   },
   "devDependencies": {
-    "tailwindcss": "^3.4.17",
+    "autoprefixer": "^10.4.21",
     "postcss": "^8.5.5",
-    "autoprefixer": "^10.4.21"
+    "tailwindcss": "^3.4.17"
+  },
+  "dependencies": {
+    "tailwind-scrollbar-hide": "^4.0.0"
   }
 }
