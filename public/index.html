@@ -24,7 +24,7 @@
 <body class="bg-gray-50 text-gray-900 font-sans transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100">
 
 <!-- NAVIGATION -->
-<nav class="nav-container fixed top-0 left-0 right-0">
+<nav id="main-navbar" class="nav-container fixed top-0 left-0 right-0">
   <div class="nav-inner">
     <!-- Mobile Menu Button (Left Side) -->
     <button class="md:hidden nav-mobile-button" aria-label="Toggle menu">
@@ -125,59 +125,6 @@
   <div class="blob blob-4"></div>
   <div class="blob blob-5"></div>
 </div>
-
-<style>
-  /* Remove background from non-hero sections */
-  section:not(#hero) {
-    background: none !important;
-  }
-
-  /* Blob container */
-  .blob-layer {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    pointer-events: none;
-    overflow: hidden;
-  }
-
-  /* Blob styles */
-  .blob {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(60px);
-    opacity: 0.4;
-    animation: float 20s ease-in-out infinite;
-  }
-
-  /* Blob positions */
-  .blob-1 { background: #f79939; width: 300px; height: 300px; top: 20%; left: 5%; }
-  .blob-2 { background: #bc2d57; width: 400px; height: 400px; bottom: 15%; right: 10%; animation-delay: 4s; }
-  .blob-3 { background: #225894; width: 250px; height: 250px; top: 30%; right: 20%; animation-delay: 8s; }
-  .blob-4 { background: #06242e; width: 350px; height: 350px; bottom: 25%; left: 15%; animation-delay: 12s; }
-  .blob-5 { background: #e971af; width: 200px; height: 200px; top: 60%; left: 30%; animation-delay: 16s; }
-
-  @keyframes float {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    25% { transform: translate(10vw, -8vh) scale(1.1); }
-    50% { transform: translate(5vw, 10vh) scale(0.9); }
-    75% { transform: translate(-8vw, 5vh) scale(1.05); }
-  }
-
-  /* Content stacking */
-  section {
-    position: relative;
-    z-index: 1;
-  }
-
-  /* Keep hero gradient */
-  #hero .bg-gradient-layer {
-    z-index: 0;
-  }
-</style>
 
 <!-- PROJECTS -->
 <section id="projects" class="py-20 bg-white dark:bg-gray-900 px-4 sm:px-6">
@@ -372,11 +319,15 @@
       modalTech.textContent = project.tech;
       modal.classList.remove('hidden');
       document.body.style.overflow = 'hidden';
+      document.getElementById('main-navbar').classList.add('hidden');
+
     }
     
     function closeModalHandler() {
       modal.classList.add('hidden');
       document.body.style.overflow = '';
+      document.getElementById('main-navbar').classList.remove('hidden');
+
     }
     closeModal.addEventListener('click', function() {
       closeModalHandler();
@@ -495,7 +446,7 @@
         class="bg-white dark:bg-gray-700 rounded-xl shadow-lg p-4 transform hover:scale-105 transition duration-300 cursor-pointer"
         @click="modalOpen = true; modalImage = 'public/images/coding.jpg'"
       >
-        <img src="public/images/coding.jpg" alt="Coding" class="w-full h-40 object-cover rounded-md mb-4">
+        <img src="images/about1.jpg" alt="Coding" class="w-full h-40 object-cover rounded-md mb-4">
         <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Web Development</h3>
         <p class="text-gray-600 dark:text-gray-300 text-sm">Turning designs and ideas into beautiful web applications.</p>
       </div>
@@ -504,7 +455,7 @@
         class="bg-white dark:bg-gray-700 rounded-xl shadow-lg p-4 transform hover:scale-105 transition duration-300 cursor-pointer"
         @click="modalOpen = true; modalImage = 'public/images/journaling.jpg'"
       >
-        <img src="public/images/journaling.jpg" alt="Journaling" class="w-full h-40 object-cover rounded-md mb-4">
+        <img src="images/about2.jpg" alt="Journaling" class="w-full h-40 object-cover rounded-md mb-4">
         <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Journaling</h3>
         <p class="text-gray-600 dark:text-gray-300 text-sm">Writing thoughts, gratitude, and tracking habits with intention.</p>
       </div>
@@ -513,7 +464,7 @@
         class="bg-white dark:bg-gray-700 rounded-xl shadow-lg p-4 transform hover:scale-105 transition duration-300 cursor-pointer"
         @click="modalOpen = true; modalImage = 'public/images/languages.jpg'"
       >
-        <img src="public/images/languages.jpg" alt="Languages" class="w-full h-40 object-cover rounded-md mb-4">
+        <img src="images/about3.jpg" alt="Languages" class="w-full h-40 object-cover rounded-md mb-4">
         <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Language Learning</h3>
         <p class="text-gray-600 dark:text-gray-300 text-sm">Studying Korean and Japanese as a passion project.</p>
       </div>
