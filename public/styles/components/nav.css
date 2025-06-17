@@ -2,6 +2,16 @@
 /* NAVIGATION COMPONENT  */
 /* ===================== */
 
+/* For all scrollable elements and page */
+* {
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* IE and Edge */
+}
+/* Webkit browsers (Chrome, Safari) */
+*::-webkit-scrollbar {
+  display: none;
+}
+
 /* Base Container */
 .nav-container {
   font-family: Lato, sans-serif;
