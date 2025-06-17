@@ -227,7 +227,6 @@
   font-family: 'Lato', sans-serif;
   max-inline-size: 60%; /* Default for desktop */
 }
-
 @media (max-width: 640px) {
   .experience-text {
     max-inline-size: 100rem; /* More space for small screens */

@@ -369,53 +369,106 @@
   });
 </script>
 
-<!-- EXPERIENCE -->
-<section class="py-20 bg-white dark:bg-gray-900 px-6">
-  <div class="max-w-5xl mx-auto">
-    <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-10">Experience</h2>
-    <ol class="border-l-4 border-pink-500 pl-6 space-y-8">
-      <li>
-        <div class="text-pink-600 font-bold">2021 – 2025</div>
-        <h3 class="text-xl font-semibold text-gray-800 dark:text-white">BS in Computer Science Graduate</h3>
-        <p class="experience-text text-gray-600 dark:text-gray-300 text-sm">
-          Technological University of the Philippines, Manila
-        </p>
-        <p class="experience-text mt-3 text-gray-600 dark:text-gray-300 text-sm">
-          Studied core topics in computer science, including web development, databases, and software engineering, as well as
-          foundational subjects such as logic, algorithms, and data structures.
-        </p>
-      </li>
-      <li>
-        <div class="text-pink-600 font-bold">2022 – 2024</div>
-        <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Full-Stack Web Developer Intern</h3>
-        <p class="text-gray-600 dark:text-gray-300 text-sm">
-          Paramount Life and General Insurance Corp., Makati
-        </p>
-        <p class="experience-text mt-3 text-gray-600 dark:text-gray-300 text-sm">
-          Developed a fully functional E-Learning System from scratch using C#, ASP.NET MVC, HTML5/CSS3, SQL Server (MSSQL),
-          and designed user interfaces using Figma. 
-        </p>
-      </li>
-    </ol>
-  </div>
-</section>
+<!-- EXPERIENCE & CERTIFICATIONS - SPLIT LAYOUT -->
+<section class="py-16 bg-white dark:bg-gray-900 px-4 sm:px-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-14">
+      <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-3">
+        Experience & Certifications
+      </h2>
+      <div class="w-20 h-1 bg-pink-600 mx-auto"></div>
+    </div>
 
-  <!-- CERTIFICATIONS -->
-<section class="py-20 bg-white dark:bg-gray-900 px-6" x-data="{ openTab: null }">
-  <div class="max-w-5xl mx-auto">
-    <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-8">Certifications</h2>
-    
-    <div class="space-y-4">
-      <div @click="openTab = openTab === 1 ? null : 1" class="cursor-pointer bg-gray-100 dark:bg-gray-700 p-4 rounded shadow hover:bg-gray-200 dark:hover:bg-gray-600 transition">
-        <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Full Stack Web Development - Codecademy</h3>
-        <div x-show="openTab === 1" class="mt-2 text-gray-700 dark:text-gray-300 transition duration-300">
-          <a href="#" class="text-blue-500 underline">View Certificate</a>
+    <div class="flex flex-col lg:flex-row gap-10">
+      <!-- Left Column - Experience -->
+      <div class="lg:w-1/2">
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-md border-l-4 border-pink-500">
+          <h3 class="text-2xl font-semibold text-pink-600 mb-8 flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            Professional Journey
+          </h3>
+          
+          <div class="space-y-8">
+            <!-- Experience 1 -->
+            <div class="relative pl-8 pb-8 border-l-2 border-pink-300 dark:border-pink-700">
+              <div class="absolute -left-2 top-0 w-4 h-4 rounded-full bg-pink-500"></div>
+              <div class="text-pink-600 font-bold text-sm mb-1">2021 – 2025</div>
+              <h4 class="text-xl font-bold text-gray-800 dark:text-white mb-1">BS in Computer Science</h4>
+              <p class="text-gray-600 dark:text-gray-300 text-sm font-medium mb-3">Technological University of the Philippines, Manila</p>
+              <p class="text-gray-600 dark:text-gray-400 text-sm">
+                Studied core computer science topics including web development, databases, software engineering, algorithms, and data structures.
+              </p>
+            </div>
+            
+            <!-- Experience 2 -->
+            <div class="relative pl-8">
+              <div class="absolute -left-2 top-0 w-4 h-4 rounded-full bg-pink-500"></div>
+              <div class="text-pink-600 font-bold text-sm mb-1">2022 – 2024</div>
+              <h4 class="text-xl font-bold text-gray-800 dark:text-white mb-1">Full-Stack Web Developer Intern</h4>
+              <p class="text-gray-600 dark:text-gray-300 text-sm font-medium mb-3">Paramount Life and General Insurance Corp., Makati</p>
+              <p class="text-gray-600 dark:text-gray-400 text-sm">
+                Built a fully functional E-Learning System using C#, ASP.NET MVC, HTML5/CSS3, and SQL Server, with interfaces designed in Figma.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-      <div @click="openTab = openTab === 2 ? null : 2" class="cursor-pointer bg-gray-100 dark:bg-gray-700 p-4 rounded shadow hover:bg-gray-200 dark:hover:bg-gray-600 transition">
-        <h3 class="text-xl font-semibold text-gray-800 dark:text-white">UI/UX Design Specialization - Coursera</h3>
-        <div x-show="openTab === 2" class="mt-2 text-gray-700 dark:text-gray-300 transition duration-300">
-          <a href="#" class="text-blue-500 underline">View Certificate</a>
+
+      <!-- Right Column - Certifications -->
+      <div class="lg:w-1/2">
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-md border-l-4 border-pink-500 h-full">
+          <h3 class="text-2xl font-semibold text-pink-600 mb-8 flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            Certifications
+          </h3>
+          
+          <div class="space-y-6">
+            <!-- Certification 1 -->
+            <div class="group bg-white dark:bg-gray-700 p-5 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border border-gray-200 dark:border-gray-600 hover:border-pink-300 dark:hover:border-pink-500">
+              <div class="flex items-start">
+                <div class="bg-pink-100 dark:bg-pink-900/30 p-2 rounded-lg mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <div class="flex-1">
+                  <h4 class="text-lg font-bold text-gray-800 dark:text-white mb-1">Full Stack Web Development</h4>
+                  <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Codecademy</p>
+                  <a href="#" class="inline-flex items-center text-pink-600 hover:text-pink-700 dark:hover:text-pink-500 text-sm font-medium transition">
+                    View Certificate
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Certification 2 -->
+            <div class="group bg-white dark:bg-gray-700 p-5 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border border-gray-200 dark:border-gray-600 hover:border-pink-300 dark:hover:border-pink-500">
+              <div class="flex items-start">
+                <div class="bg-pink-100 dark:bg-pink-900/30 p-2 rounded-lg mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <div class="flex-1">
+                  <h4 class="text-lg font-bold text-gray-800 dark:text-white mb-1">UI/UX Design Specialization</h4>
+                  <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Coursera</p>
+                  <a href="#" class="inline-flex items-center text-pink-600 hover:text-pink-700 dark:hover:text-pink-500 text-sm font-medium transition">
+                    View Certificate
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
