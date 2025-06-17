@@ -550,15 +550,13 @@
 -->
 
 <!-- ABOUT ME -->
-<section id="about" class="py-24 bg-pink-50 dark:bg-gray-900 px-6" x-data="{ modalOpen: false, modalImage: '' }">
+<section id="about" class="py-24 bg-pink-50 dark:bg-gray-900 px-6" x-data="aboutMe()" @keydown.escape.window="closeModal">
   <div class="max-w-6xl mx-auto">
     <!-- Title -->
     <div class="text-center mb-16">
-      <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4 animate-fade-in">
-        About Me
-      </h2>
-      <p class="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto animate-fade-in delay-200">
-        I'm <span class="font-semibold text-pink-600 dark:text-pink-400">Alliah Gabrielle</span>, or <strong>Gab</strong> for short — a passionate
+      <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">About Me</h2>
+      <p class="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
+        I'm <span class="font-semibold text-pink-600 dark:text-pink-400">Alliah Gabrielle</span>, or <strong>Gab</strong> for short— a passionate
         <span class="italic">full-stack developer</span> from the Philippines, currently studying Computer Science at TUP Manila.
         I love crafting interactive, accessible web applications and exploring emerging tech.
         When not coding, I'm likely journaling, learning Korean & Japanese, or cozying up with a good book.
@@ -567,43 +565,96 @@
 
     <!-- Hobby Cards -->
     <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-      <!-- Card Template -->
-      <template x-for="(card, index) in [
-        { title: 'Web Development', image: 'images/about1.jpg', desc: 'Turning designs and ideas into beautiful web applications.' },
-        { title: 'Journaling', image: 'images/about2.jpg', desc: 'Writing thoughts, gratitude, and tracking habits with intention.' },
-        { title: 'Language Learning', image: 'images/about3.jpg', desc: 'Studying Korean and Japanese as a passion project.' }
-      ]" :key="index">
+      <template x-for="(card, index) in cards" :key="index">
         <div
-          class="bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1 cursor-pointer overflow-hidden"
-          @click="modalOpen = true; modalImage = card.image"
+          class="bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 cursor-pointer overflow-hidden"
+          @click="openModal(card)"
         >
           <div class="aspect-video w-full overflow-hidden">
             <img :src="card.image" :alt="card.title" class="w-full h-full object-cover transition duration-300 hover:scale-105">
           </div>
           <div class="p-5">
             <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2" x-text="card.title"></h3>
-            <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed" x-text="card.desc"></p>
+            <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed" x-text="card.short"></p>
           </div>
         </div>
       </template>
     </div>
-
-    <!-- Modal (Lightbox) -->
+    <!-- Modal -->
     <div
-      class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm"
-      x-show="modalOpen"
-      x-transition
+      class="fixed inset-0 z-[9999] flex items-center justify-center px-4 bg-black/40 backdrop-blur-sm transition duration-200"
+      x-show="showModal"
+      x-transition.opacity
+      @click.self="closeModal"
+      x-cloak
     >
-      <div class="relative bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg max-w-4xl w-full p-6">
+      <div
+        class="relative bg-white dark:bg-gray-900 rounded-xl shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto transition duration-300 ease-in-out"
+      >
+        <!-- Close Button (Top Right, Not Overlapping Image) -->
         <button
-          class="absolute top-3 right-4 text-gray-800 dark:text-white text-2xl font-bold"
-          @click="modalOpen = false"
-        >✕</button>
-        <img :src="modalImage" alt="Modal Preview" class="w-full rounded-lg">
+          @click="closeModal"
+          class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-white z-20"
+          aria-label="Close modal"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+
+        <!-- Modal Content -->
+        <div class="px-6 pt-12 pb-6"> <!-- pt-12 leaves space for the close button -->
+          <img :src="activeCard.image" alt="Modal Image" class="w-full h-60 object-cover rounded-lg mb-4">
+
+          <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2" x-text="activeCard.title"></h3>
+          <p class="text-gray-700 dark:text-gray-300 text-base" x-text="activeCard.description"></p>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- AlpineJS Component -->
+<script>
+  function aboutMe() {
+    return {
+      showModal: false,
+      activeCard: {},
+      cards: [
+        {
+          title: 'Web Development',
+          image: 'images/about1.jpg',
+          short: 'Building accessible web apps.',
+          description: 'Turning designs and ideas into beautiful, functional, and responsive web applications. I enjoy both frontend and backend development.'
+        },
+        {
+          title: 'Journaling',
+          image: 'images/about2.jpg',
+          short: 'Writing and reflecting daily.',
+          description: 'I journal to reflect on my thoughts, track habits, express gratitude, and keep my mental clarity in check.'
+        },
+        {
+          title: 'Language Learning',
+          image: 'images/about3.jpg',
+          short: 'Studying Korean and Japanese.',
+          description: 'Language learning is a lifelong passion. I study Korean and Japanese to connect with cultures, media, and people from around the world.'
+        }
+      ],
+      openModal(card) {
+        this.activeCard = card;
+        this.showModal = true;
+        document.body.classList.add('overflow-hidden');
+        document.getElementById('main-navbar').classList.add('hidden');
+      },
+      closeModal() {
+        this.showModal = false;
+        this.activeCard = {};
+        document.body.classList.remove('overflow-hidden');
+        document.getElementById('main-navbar').classList.remove('hidden');
+      }
+    };
+  }
+</script>
 
 <!-- CONTACT -->
 <section id="contact" class="py-20 bg-pink-100 dark:bg-gray-800 px-6">
