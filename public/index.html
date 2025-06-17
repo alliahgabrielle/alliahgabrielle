@@ -47,7 +47,7 @@
       <li><a href="#about" class="nav-link">About Me</a></li>
       <li><a href="#contact" class="nav-link">Contact</a></li>
       <li>
-        <a href="images/Resume.pdf" download = "Resume.pdf" class="nav-link">
+        <a href="files/Resume.pdf" download = "Resume.pdf" class="nav-link">
           Download CV
         </a>
       </li>
@@ -531,7 +531,7 @@
   }
 </script>
 
-<!-- TESTIMONIALS -->
+<!-- TESTIMONIALS
 <section class="py-20 bg-white dark:bg-gray-900 px-6">
   <div class="max-w-5xl mx-auto text-center">
     <h2 class="project-title font-bold dark:text-white mb-3">Client Feedback</h2>
@@ -547,67 +547,59 @@
     </div>
   </div>
 </section>
+-->
 
 <!-- ABOUT ME -->
-<section id="about" class="project-title py-20 bg-pink-50 dark:bg-gray-800 px-6" x-data="{ modalOpen: false, modalImage: '' }">
-  <div class="max-w-5xl mx-auto">
-    <div class="text-center mb-12">
-      <h2 class="project-title font-bold dark:text-white mb-3">
+<section id="about" class="py-24 bg-pink-50 dark:bg-gray-900 px-6" x-data="{ modalOpen: false, modalImage: '' }">
+  <div class="max-w-6xl mx-auto">
+    <!-- Title -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4 animate-fade-in">
         About Me
       </h2>
-      <h1 class="project-subtitle dark:text-white">
-        I'm Alliah Gabrielle, or <strong>Gab</strong> for short.
-        A passionate full-stack developer from the Philippines,
-        currently pursuing a degree in Computer Science at TUP
-        Manila. I love creating interactive, accessible web applications
-        and exploring new technologies. When I'm not coding, you can find me
-        journaling, learning languages, or enjoying a good book.
-      </h1>
+      <p class="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto animate-fade-in delay-200">
+        I'm <span class="font-semibold text-pink-600 dark:text-pink-400">Alliah Gabrielle</span>, or <strong>Gab</strong> for short — a passionate
+        <span class="italic">full-stack developer</span> from the Philippines, currently studying Computer Science at TUP Manila.
+        I love crafting interactive, accessible web applications and exploring emerging tech.
+        When not coding, I'm likely journaling, learning Korean & Japanese, or cozying up with a good book.
+      </p>
     </div>
 
     <!-- Hobby Cards -->
-    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-      <!-- Hobby Card -->
-      <div
-        class="bg-white dark:bg-gray-700 rounded-xl shadow-lg p-4 transform hover:scale-105 transition duration-300 cursor-pointer"
-        @click="modalOpen = true; modalImage = 'public/images/coding.jpg'"
-      >
-        <img src="images/about1.jpg" alt="Coding" class="w-full h-40 object-cover rounded-md mb-4">
-        <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Web Development</h3>
-        <p class="text-gray-600 dark:text-gray-300 text-sm">Turning designs and ideas into beautiful web applications.</p>
-      </div>
-
-      <div
-        class="bg-white dark:bg-gray-700 rounded-xl shadow-lg p-4 transform hover:scale-105 transition duration-300 cursor-pointer"
-        @click="modalOpen = true; modalImage = 'public/images/journaling.jpg'"
-      >
-        <img src="images/about2.jpg" alt="Journaling" class="w-full h-40 object-cover rounded-md mb-4">
-        <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Journaling</h3>
-        <p class="text-gray-600 dark:text-gray-300 text-sm">Writing thoughts, gratitude, and tracking habits with intention.</p>
-      </div>
-
-      <div
-        class="bg-white dark:bg-gray-700 rounded-xl shadow-lg p-4 transform hover:scale-105 transition duration-300 cursor-pointer"
-        @click="modalOpen = true; modalImage = 'public/images/languages.jpg'"
-      >
-        <img src="images/about3.jpg" alt="Languages" class="w-full h-40 object-cover rounded-md mb-4">
-        <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Language Learning</h3>
-        <p class="text-gray-600 dark:text-gray-300 text-sm">Studying Korean and Japanese as a passion project.</p>
-      </div>
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- Card Template -->
+      <template x-for="(card, index) in [
+        { title: 'Web Development', image: 'images/about1.jpg', desc: 'Turning designs and ideas into beautiful web applications.' },
+        { title: 'Journaling', image: 'images/about2.jpg', desc: 'Writing thoughts, gratitude, and tracking habits with intention.' },
+        { title: 'Language Learning', image: 'images/about3.jpg', desc: 'Studying Korean and Japanese as a passion project.' }
+      ]" :key="index">
+        <div
+          class="bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1 cursor-pointer overflow-hidden"
+          @click="modalOpen = true; modalImage = card.image"
+        >
+          <div class="aspect-video w-full overflow-hidden">
+            <img :src="card.image" :alt="card.title" class="w-full h-full object-cover transition duration-300 hover:scale-105">
+          </div>
+          <div class="p-5">
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2" x-text="card.title"></h3>
+            <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed" x-text="card.desc"></p>
+          </div>
+        </div>
+      </template>
     </div>
 
     <!-- Modal (Lightbox) -->
     <div
-      class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
+      class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm"
       x-show="modalOpen"
       x-transition
     >
-      <div class="bg-white dark:bg-gray-800 p-4 rounded-lg max-w-3xl w-full relative">
+      <div class="relative bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg max-w-4xl w-full p-6">
         <button
-          class="absolute top-2 right-2 text-black dark:text-white text-xl font-bold"
+          class="absolute top-3 right-4 text-gray-800 dark:text-white text-2xl font-bold"
           @click="modalOpen = false"
         >✕</button>
-        <img :src="modalImage" alt="Modal Image" class="w-full rounded">
+        <img :src="modalImage" alt="Modal Preview" class="w-full rounded-lg">
       </div>
     </div>
   </div>
