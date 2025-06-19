@@ -18,6 +18,7 @@
           "scrollbar-width: none"
         ]
       }
-    ]
+    ],
+    "axe/name-role-value": "off"
   }
 }
