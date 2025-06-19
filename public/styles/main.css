@@ -204,7 +204,7 @@
   .blob-1 { background: #f79939; width: 300px; height: 300px; top: 20%; left: 5%; }
   .blob-2 { background: #bc2d57; width: 400px; height: 400px; bottom: 15%; right: 10%; animation-delay: 4s; }
   .blob-3 { background: #225894; width: 250px; height: 250px; top: 30%; right: 20%; animation-delay: 8s; }
-  .blob-4 { background: #06242e; width: 350px; height: 350px; bottom: 25%; left: 15%; animation-delay: 12s; }
+  .blob-4 { background: #a7e9ff; width: 350px; height: 350px; bottom: 25%; left: 15%; animation-delay: 12s; }
   .blob-5 { background: #e971af; width: 200px; height: 200px; top: 60%; left: 30%; animation-delay: 16s; }
   @keyframes float {
     0%, 100% { transform: translate(0, 0) scale(1); }
