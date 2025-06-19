@@ -151,7 +151,6 @@
   letter-spacing: 0.5px;
 }
 .project-subtitle {
-  font-family: Lato, sans-serif; /* Use a sans-serif font for a clean subtitle */
   font-size: 1.125rem; /* Slightly smaller than the title */
   text-align: center;
   color: #555; /* Slightly lighter text color for the subtitle */
@@ -233,3 +232,5 @@
     max-inline-size: 100rem; /* More space for small screens */
   }
 }
+
+/* Footer Styles */
