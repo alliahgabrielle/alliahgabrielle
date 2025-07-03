@@ -130,61 +130,87 @@
   <div class="max-w-6xl mx-auto">
     <h2 class="project-title font-bold dark:text-white mb-3">Featured Projects</h2>
     <h1 class="project-subtitle text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto dark:text-white">
-      Here’s a showcase of projects that highlight my passion for coding and design.
+      Here's a showcase of projects that highlight my passion for coding and design.
       Click each project to learn more about the works and technologies behind them!
     </h1>
     
-<!-- Projects Container -->
-<div class="relative h-[300px] sm:h-[400px] mb-4">
-  <!-- Projects Carousel -->
-  <div id="project-carousel" class="h-full flex items-center justify-center relative">
-    <!-- Projects will be inserted here by JavaScript -->
-  </div>
-</div>
+    <!-- Projects Container -->
+    <div class="relative h-[300px] sm:h-[400px] mb-4">
+      <!-- Projects Carousel -->
+      <div id="project-carousel" class="h-full flex items-center justify-center relative">
+        <!-- Projects will be inserted here by JavaScript -->
+      </div>
+    </div>
 
-<!-- Navigation Arrows - Below carousel for all screen sizes -->
-<div class="flex justify-center gap-4 mt-4">
-  <button id="prev-btn" class="bg-white dark:bg-gray-800 shadow-md rounded-full w-10 h-10 flex items-center justify-center text-pink-600 hover:text-pink-800 transition-all" aria-label="Previous project">
-    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
-    </svg>
-  </button>
-  
-  <button id="next-btn" class="bg-white dark:bg-gray-800 shadow-md rounded-full w-10 h-10 flex items-center justify-center text-pink-600 hover:text-pink-800 transition-all" aria-label="Next project">
-    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-    </svg>
-  </button>
-</div>
-
-<!-- Project Modal || Modal container (background) -->
-<div id="project-modal" class="fixed inset-0 bg-black/30 backdrop-blur-sm z-[9999] isolation-auto hidden flex items-center justify-center p-4">
-  <!-- Modal box (do NOT make this scrollable) -->
-  <div class="bg-white dark:bg-gray-800 rounded-xl w-full max-w-4xl relative mx-4 my-auto overflow-hidden">
-    
-    <!-- Scrollable content wrapper (has overflow) -->
-    <div class="max-h-[90vh] overflow-y-auto">
-
-      <!-- Close Button -->
-      <button id="close-modal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 z-10" aria-label="Close modal">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+    <!-- Navigation Arrows - Below carousel for all screen sizes -->
+    <div class="flex justify-center gap-4 mt-4">
+      <button id="prev-btn" class="bg-white dark:bg-gray-800 shadow-md rounded-full w-10 h-10 flex items-center justify-center text-pink-600 hover:text-pink-800 transition-all" aria-label="Previous project">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
         </svg>
       </button>
+      
+      <button id="next-btn" class="bg-white dark:bg-gray-800 shadow-md rounded-full w-10 h-10 flex items-center justify-center text-pink-600 hover:text-pink-800 transition-all" aria-label="Next project">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </button>
+    </div>
 
-      <!-- Modal Content -->
-      <div class="p-6 sm:p-8">
-        <h3 id="modal-title" class="text-xl sm:text-2xl font-bold mb-4 text-center"></h3>
-        <img id="modal-image" alt="Project image" class="w-full rounded-lg mb-4 sm:mb-6 aspect-[3/2] object-cover">
-        <p id="modal-description" class="text-sm sm:text-base text-gray-700 dark:text-gray-300 mb-4 whitespace-pre-line text-justify"></p>
-        <div class="bg-gray-100 dark:bg-gray-700 p-3 sm:p-4 rounded-lg">
-          <h4 class="font-semibold text-sm sm:text-base mb-2">Technologies Used:</h4>
-          <p id="modal-tech" class="text-sm sm:text-base"></p>
+    <!-- Project Modal || Modal container (background) -->
+    <div id="project-modal" class="fixed inset-0 bg-black/30 backdrop-blur-sm z-[9999] isolation-auto hidden flex items-center justify-center p-4">
+      <!-- Modal box (do NOT make this scrollable) -->
+      <div class="bg-white dark:bg-gray-800 rounded-xl w-full max-w-4xl relative mx-4 my-auto overflow-hidden">
+        
+        <!-- Scrollable content wrapper (has overflow) -->
+        <div class="max-h-[90vh] overflow-y-auto">
+
+          <!-- Close Button -->
+          <button id="close-modal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 z-10" aria-label="Close modal">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+
+          <!-- Modal Content -->
+          <div class="p-6 sm:p-8">
+            <h3 id="modal-title" class="text-xl sm:text-2xl font-bold mb-4 text-center"></h3>
+            
+            <!-- Image Gallery Container -->
+            <div class="relative mb-4 sm:mb-6">
+              <div id="modal-gallery" class="w-full rounded-lg aspect-[4/2] bg-gray-100 dark:bg-gray-700 relative overflow-hidden">
+                <!-- Images will be inserted here by JavaScript -->
+              </div>
+              
+              <!-- Gallery Navigation Arrows -->
+              <button id="gallery-prev" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 dark:bg-gray-700/80 rounded-full w-8 h-8 flex items-center justify-center text-gray-800 dark:text-gray-200 hover:bg-white dark:hover:bg-gray-600 transition-all z-10 hidden" aria-label="Previous image">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                </svg>
+              </button>
+              
+              <button id="gallery-next" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 dark:bg-gray-700/80 rounded-full w-8 h-8 flex items-center justify-center text-gray-800 dark:text-gray-200 hover:bg-white dark:hover:bg-gray-600 transition-all z-10 hidden" aria-label="Next image">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </button>
+              
+              <!-- Image Counter -->
+              <div id="image-counter" class="absolute bottom-2 right-2 bg-black/50 text-white text-xs px-2 py-1 rounded-md z-10 hidden">
+                <span id="current-image">1</span>/<span id="total-images">1</span>
+              </div>
+            </div>
+            
+            <p id="modal-description" class="text-sm sm:text-base text-gray-700 dark:text-gray-300 mb-4 whitespace-pre-line text-justify"></p>
+            <div class="bg-gray-100 dark:bg-gray-700 p-3 sm:p-4 rounded-lg">
+              <h4 class="font-semibold text-sm sm:text-base mb-2">Technologies Used:</h4>
+              <p id="modal-tech" class="text-sm sm:text-base"></p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 </section>
 
 <!-- JavaScript for Projects  -->
@@ -195,66 +221,52 @@
       {
         id: 1,
         title: "Paramount Key Operational Procedures",
-        image: "images/proj2.jpg",
+        images: ["images/proj2.jpg"],
         description: `The E-Learning System is a web-based platform developed to deliver department-specific training materials to employees within an organization.Each employee can view only the content that is intended for their assigned department, ensuring relevance and clarity in learning delivery. The platform helps streamline internal knowledge sharing by providing a centralized and role-based interface for structured content viewing.
         
         I worked as a full-stack developer on this project, building the backend using ASP.NET MVC with C# and implementing the frontend using HTML5, CSS3, and JavaScript. Data management was handled using Microsoft SQL Server, and we followed agile development practices using Jira for task tracking and sprint planning.`,
-        tech: "C#, ASP.NET MVC, JavaScript, HTML5, CSS3, MSSQL, Jira, Figma"
+        tech: "C#, ASP.NET MVC, JavaScript, HTML5, CSS3, SQL SMS, Jira, Figma"
       },
       {
         id: 2,
-        title: "Portfolio Website",
-        image: "images/proj1.jpg",
-        description: "A fully responsive portfolio built with React and Tailwind showcasing my development journey.",
-        tech: "React, Tailwind CSS, Vite"
+        title: "Bleeb Translator",
+        images: ["images/proj3.jpg", "images/proj3.1.jpg"],
+        description: 'Bleeb Translator is a dynamic and playful web application that converts user input into a fictional, whimsical language called "Bleeb." Designed to be both entertaining and interactive, the translator features a sleek, responsive interface with real-time text transformation and engaging animations. As the front-end developer, I focused on delivering a seamless user experience with intuitive controls and visually appealing feedback.',
+        tech: "Figma, Vue.js, HTML, CSS"
       },
       {
         id: 3,
-        title: "Bleeb Translator",
-        image: "images/proj3.jpg",
-        description: 'Bleeb Translator is a dynamic and playful web application that converts user input into a fictional, whimsical language called "Bleeb." Designed to be both entertaining and interactive, the translator features a sleek, responsive interface with real-time text transformation and engaging animations. As the front-end developer, I focused on delivering a seamless user experience with intuitive controls and visually appealing feedback.',
-        tech: "Figma, Vue.js, HTML, CSS"
+        title: "Portfolio Website",
+        images: ["images/proj1.jpg"],
+        description: "A fully responsive portfolio built with React and Tailwind showcasing my development journey.",
+        tech: "React, Tailwind CSS, Vite"
       }
-      /*{
-        id: 4,
-        title: "E-Commerce Platform",
-        image: "images/proj4.jpg",
-        description: "A full-featured online store with product listings and payment integration.",
-        tech: "React, Node.js, Stripe"
-      },
-      {
-        id: 5,
-        title: "Weather Dashboard",
-        image: "images/proj5.jpg",
-        description: "Real-time weather forecasting application with interactive maps.",
-        tech: "JavaScript, API Integration"
-      },
-      {
-        id: 6,
-        title: "Task Manager",
-        image: "images/proj6.jpg",
-        description: "Productivity application for organizing daily tasks and projects.",
-        tech: "React, Firebase"
-      } */
     ];
 
     // DOM elements
     const carousel = document.getElementById('project-carousel');
-    const prevBtnMobile = document.getElementById('prev-btn-mobile');
-    const nextBtnMobile = document.getElementById('next-btn-mobile');
-    const prevBtnDesktop = document.getElementById('prev-btn-desktop');
-    const nextBtnDesktop = document.getElementById('next-btn-desktop');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
     const modal = document.getElementById('project-modal');
     const modalTitle = document.getElementById('modal-title');
-    const modalImage = document.getElementById('modal-image');
+    const modalGallery = document.getElementById('modal-gallery');
     const modalDescription = document.getElementById('modal-description');
     const modalTech = document.getElementById('modal-tech');
     const closeModal = document.getElementById('close-modal');
+    const galleryPrev = document.getElementById('gallery-prev');
+    const galleryNext = document.getElementById('gallery-next');
+    const imageCounter = document.getElementById('image-counter');
+    const currentImageSpan = document.getElementById('current-image');
+    const totalImagesSpan = document.getElementById('total-images');
 
     // Carousel state
     let currentIndex = 0;
     const visibleProjects = 5;
     let isMobile = window.innerWidth < 640;
+
+    // Gallery state
+    let currentProjectImages = [];
+    let currentGalleryIndex = 0;
 
     // Initialize carousel
     function initCarousel() {
@@ -274,7 +286,7 @@
         
         projectEl.innerHTML = `
           <div class="relative cursor-pointer group" data-id="${project.id}">
-            <img src="${project.image}" alt="${project.title}" class="w-full ${imgClass} object-cover rounded-lg aspect-[3/2] transition-all duration-300 ${i === 0 ? '' : 'filter blur-sm brightness-90'}">
+            <img src="${project.images[0]}" alt="${project.title}" class="w-full ${imgClass} object-cover rounded-lg aspect-[3/2] transition-all duration-300 ${i === 0 ? '' : 'filter blur-sm brightness-90'}">
             <div class="absolute bottom-2 left-2 text-white font-semibold ${titleSize} drop-shadow-lg">${project.title}</div>
             <div class="absolute inset-0 bg-black/30 ${i === 0 ? 'group-hover:bg-black/0' : ''} transition-all duration-300 rounded-lg"></div>
           </div>
@@ -317,48 +329,88 @@
       initCarousel();
     }
 
+    // Gallery functions
+    function updateGallery() {
+      modalGallery.innerHTML = '';
+      
+      currentProjectImages.forEach((image, index) => {
+        const img = document.createElement('img');
+        img.src = image;
+        img.alt = `${modalTitle.textContent} - Image ${index + 1}`;
+        img.className = `w-full h-full object-cover absolute inset-0 transition-opacity duration-300 ${index === currentGalleryIndex ? 'opacity-100' : 'opacity-0'}`;
+        modalGallery.appendChild(img);
+      });
+      
+      // Update counter
+      currentImageSpan.textContent = currentGalleryIndex + 1;
+      totalImagesSpan.textContent = currentProjectImages.length;
+      
+      // Show/hide navigation arrows
+      galleryPrev.classList.toggle('hidden', currentProjectImages.length <= 1);
+      galleryNext.classList.toggle('hidden', currentProjectImages.length <= 1);
+      imageCounter.classList.toggle('hidden', currentProjectImages.length <= 1);
+    }
+
+    function nextImage() {
+      if (currentProjectImages.length <= 1) return;
+      currentGalleryIndex = (currentGalleryIndex + 1) % currentProjectImages.length;
+      updateGallery();
+    }
+
+    function prevImage() {
+      if (currentProjectImages.length <= 1) return;
+      currentGalleryIndex = (currentGalleryIndex - 1 + currentProjectImages.length) % currentProjectImages.length;
+      updateGallery();
+    }
+
     // Modal functions
     function openModal(index) {
       const project = projects[index];
       modalTitle.textContent = project.title;
-      modalImage.src = project.image;
-      modalImage.alt = project.title;
       modalDescription.textContent = project.description;
       modalTech.textContent = project.tech;
+      
+      // Set gallery images
+      currentProjectImages = project.images;
+      currentGalleryIndex = 0;
+      updateGallery();
+      
       modal.classList.remove('hidden');
       document.body.style.overflow = 'hidden';
       document.getElementById('main-navbar').classList.add('hidden');
-
     }
     
     function closeModalHandler() {
       modal.classList.add('hidden');
       document.body.style.overflow = '';
       document.getElementById('main-navbar').classList.remove('hidden');
-
     }
-    closeModal.addEventListener('click', function() {
-      closeModalHandler();
+
+    // Event listeners
+    closeModal.addEventListener('click', closeModalHandler);
+    window.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModalHandler();
+      }
     });
 
-    window.addEventListener('click', (e) => {
-    if (e.target === modal) {  // Check if the clicked element is the modal background
-      closeModalHandler();  // Close the modal if it's the background
-    }
-  })
-
-  // Event listeners to use these single buttons
-  const prevBtn = document.getElementById('prev-btn');
-  const nextBtn = document.getElementById('next-btn');
-
-  prevBtn.addEventListener('click', prevProject);
-  nextBtn.addEventListener('click', nextProject);
+    prevBtn.addEventListener('click', prevProject);
+    nextBtn.addEventListener('click', nextProject);
+    galleryPrev.addEventListener('click', prevImage);
+    galleryNext.addEventListener('click', nextImage);
 
     // Keyboard navigation
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowLeft') prevProject();
-      if (e.key === 'ArrowRight') nextProject();
-      if (e.key === 'Escape') closeModalHandler();
+      if (modal.classList.contains('hidden')) {
+        // Only navigate carousel when modal is closed
+        if (e.key === 'ArrowLeft') prevProject();
+        if (e.key === 'ArrowRight') nextProject();
+      } else {
+        // Navigate gallery when modal is open
+        if (e.key === 'ArrowLeft') prevImage();
+        if (e.key === 'ArrowRight') nextImage();
+        if (e.key === 'Escape') closeModalHandler();
+      }
     });
 
     // Handle window resize
@@ -746,6 +798,11 @@
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" 
                   alt="React" class="w-8 h-8 group-hover:scale-105 transition-transform"/>
               <span class="tech-tooltip">React</span>
+            </div>
+            <div class="tech-icon group">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" 
+                  alt="Vue.js" class="w-8 h-8 group-hover:scale-105 transition-transform"/>
+              <span class="tech-tooltip">Vue.js</span>
             </div>
             <div class="tech-icon group">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" 
