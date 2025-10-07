@@ -13,7 +13,7 @@ I'm an aspiring full-stack developer currently expanding my skills in both front
 - Learn from your experience— feel free to teach me things you think I could improve!<br><br>
 
 📫 **Let’s connect:**<br>
-- Email: alliahgabrielle@gmail.com<br>
+- Email: alliahgabriellegalang@gmail.com<br>
 - Website: [alliahgabrielle.vercel.app](https://alliahgabrielle.vercel.app/)<br>
 - Facebook: [Alliah Gabrielle](https://facebook.com/alliahgabriell3)<br>
 - Instagram: [@alliahgabrielle_](https://instagram.com/alliahgabrielle_)<br>
