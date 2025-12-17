@@ -17,19 +17,9 @@ I'm an aspiring full-stack developer currently expanding my skills in both front
 - Website: [alliahgabrielle.vercel.app](https://alliahgabrielle.vercel.app/)<br>
 - Facebook: [Alliah Gabrielle](https://facebook.com/alliahgabriell3)<br>
 - Instagram: [@alliahgabrielle_](https://instagram.com/alliahgabrielle_)<br>
-- Twitter: [@alliahgabriell3](https://twitter.com/alliahgabriell3)<br><br>
+- X: [@alliahgabriell3](https://twitter.com/alliahgabriell3)<br><br>
 
 ✨ **Fun fact:** I love books, cozy cafes, matcha, and coding to Mariah Carey playlists ☕📖💻<br>
-
----
-
-## 🌐 Socials:
-
-[![Email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:alliahgabriellegalang@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/alliahgalang)
-[![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?logo=Facebook&logoColor=white)](https://facebook.com/alliahgabriell3)
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/alliahgabrielle_)
-[![X](https://img.shields.io/badge/X-black.svg?logo=X&logoColor=white)](https://x.com/alliahgabriell3)
 
 ---
 
