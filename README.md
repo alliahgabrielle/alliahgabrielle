@@ -48,6 +48,9 @@ I'm an aspiring full-stack developer currently expanding my skills in both front
 ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=flat&logo=figma&logoColor=white)
 ![Adobe Photoshop](https://img.shields.io/badge/adobe%20photoshop-%2331A8FF.svg?style=flat&logo=adobe%20photoshop&logoColor=white)
 ![Jira](https://img.shields.io/badge/jira-%230A0FFF.svg?style=flat&logo=jira&logoColor=white)
+![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=flat&logo=php&logoColor=white)
+![ProcessMaker](https://img.shields.io/badge/ProcessMaker-Workflow%20Automation-0B5ED7?style=flat)
+
 
 ---
 
