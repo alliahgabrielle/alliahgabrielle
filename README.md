@@ -50,6 +50,7 @@ I'm an aspiring full-stack developer currently expanding my skills in both front
 ![Jira](https://img.shields.io/badge/jira-%230A0FFF.svg?style=flat&logo=jira&logoColor=white)
 ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=flat&logo=php&logoColor=white)
 ![ProcessMaker](https://img.shields.io/badge/ProcessMaker-Workflow%20Automation-0B5ED7?style=flat)
+![phpMyAdmin](https://img.shields.io/badge/phpMyAdmin-%236C78AF.svg?style=flat&logo=phpmyadmin&logoColor=white)
 
 
 ---
