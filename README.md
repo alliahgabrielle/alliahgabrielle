@@ -17,19 +17,9 @@ I'm an aspiring full-stack developer currently expanding my skills in both front
 - Website: [alliahgabrielle.vercel.app](https://alliahgabrielle.vercel.app/)<br>
 - Facebook: [Alliah Gabrielle](https://facebook.com/alliahgabriell3)<br>
 - Instagram: [@alliahgabrielle_](https://instagram.com/alliahgabrielle_)<br>
-- Twitter: [@alliahgabriell3](https://twitter.com/alliahgabriell3)<br><br>
+- X: [@alliahgabriell3](https://twitter.com/alliahgabriell3)<br><br>
 
 ✨ **Fun fact:** I love books, cozy cafes, matcha, and coding to Mariah Carey playlists ☕📖💻<br>
-
----
-
-## 🌐 Socials:
-
-[![Email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:alliahgabriellegalang@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/alliahgalang)
-[![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?logo=Facebook&logoColor=white)](https://facebook.com/alliahgabriell3)
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/alliahgabrielle_)
-[![X](https://img.shields.io/badge/X-black.svg?logo=X&logoColor=white)](https://x.com/alliahgabriell3)
 
 ---
 
@@ -48,6 +38,10 @@ I'm an aspiring full-stack developer currently expanding my skills in both front
 ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=flat&logo=figma&logoColor=white)
 ![Adobe Photoshop](https://img.shields.io/badge/adobe%20photoshop-%2331A8FF.svg?style=flat&logo=adobe%20photoshop&logoColor=white)
 ![Jira](https://img.shields.io/badge/jira-%230A0FFF.svg?style=flat&logo=jira&logoColor=white)
+![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=flat&logo=php&logoColor=white)
+![ProcessMaker](https://img.shields.io/badge/ProcessMaker-Workflow%20Automation-0B5ED7?style=flat)
+![phpMyAdmin](https://img.shields.io/badge/phpMyAdmin-%236C78AF.svg?style=flat&logo=phpmyadmin&logoColor=white)
+
 
 ---
 
