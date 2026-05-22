@@ -24,9 +24,16 @@ function buildTechRows() {
 
 // ── Works grids (one per tab)
 function buildWorksGrids() {
-  // Group projects by tab
-  const tabs = { web: [], uiux: [], graphic: [], video: [] };
-  PROJECTS.forEach((p, i) => tabs[p.tab].push({ ...p, idx: i }));
+  const tabs = {
+    web: [],
+    uiux: [],
+    graphic: [],
+    video: []
+  };
+  PROJECTS.forEach((p, i) => tabs[p.tab].push({
+    ...p,
+    idx: i
+  }));
 
   Object.entries(tabs).forEach(([tab, projs]) => {
     const grid = document.getElementById('grid-' + tab);
@@ -41,27 +48,38 @@ function buildWorksGrids() {
     }
 
     grid.innerHTML = projs.map(p => {
-      const imgHtml = p.images[0]
-        ? `<img src="${p.images[0]}" alt="${p.title}"
-            onerror="this.parentElement.innerHTML='<div class=work-img-placeholder>✦</div>'">`
-        : `<div class="work-img-placeholder"
-              style="background:var(--surface2);width:100%;height:100%;
-                     display:flex;align-items:center;justify-content:center;font-size:3rem">✦</div>`;
+      // Use coverImage for graphic/video, otherwise first image
+      const thumbSrc = p.coverImage || (p.images && p.images[0]) || '';
+
+      const imgHtml = thumbSrc ?
+        `<img src="${thumbSrc}" alt="${p.title}"
+            onerror="this.parentElement.innerHTML='<div class=work-img-placeholder>✦</div>'">` :
+        `<div class="work-img-placeholder">✦</div>`;
 
       const tagsHtml = p.tags.map(t => `<span class="tag">${t}</span>`).join('');
+
+      // Graphic and video get a "View Gallery" label on hover instead of arrow
+      const overlayLabel = (tab === 'graphic' || tab === 'video') ?
+        `<div class="work-overlay-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"
+              stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+          </div>` :
+        `<div class="work-overlay-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"
+              stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </div>`;
 
       return `<div class="work-card" onclick="openModal(${p.idx})">
         <div class="work-card-img">
           ${imgHtml}
-          <div class="work-card-overlay">
-            <div class="work-overlay-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"
-                   stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-                <line x1="5" y1="12" x2="19" y2="12"/>
-                <polyline points="12 5 19 12 12 19"/>
-              </svg>
-            </div>
-          </div>
+          <div class="work-card-overlay">${overlayLabel}</div>
         </div>
         <div class="work-card-body">
           <div class="work-cat">${p.cat}</div>
@@ -105,8 +123,7 @@ function buildBlogs() {
           </svg>
         </button>
       </div>
-    </div>`
-  ).join('');
+    </div>`).join('');
 }
 
 // ── Certifications accordion list
@@ -141,6 +158,5 @@ function buildCerts() {
           <button onclick="toggleCert(${i})" class="cert-action cert-action-ghost">Close</button>
         </div>
       </div>
-    </div>`
-  ).join('');
+    </div>`).join('');
 }
