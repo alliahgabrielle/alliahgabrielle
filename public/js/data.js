@@ -37,54 +37,36 @@ As the front-end developer, I focused on delivering a seamless user experience w
     },
 
     // ── UI/UX Design
-    {
-        cat: 'UI/UX Design',
-        tab: 'uiux',
-        title: '🎨 UI/UX Projects Coming Soon',
-        images: [],
-        desc: "I'm currently preparing my UI/UX case studies. Check back soon for wireframes, prototypes, and design system work!",
-        tags: ['Figma', 'Adobe XD', 'Framer', 'Prototyping']
-    },
+    //{
+    //    cat: 'UI/UX Design',
+    //    tab: 'uiux',
+    //    title: '🎨 UI/UX Projects Coming Soon',
+    //    images: [],
+    //    desc: "I'm currently preparing my UI/UX case studies. Check back soon for wireframes, prototypes, and design system work!",
+    //    tags: ['Figma', 'Adobe XD', 'Framer', 'Prototyping']
+    //},
 
     // ── Graphic Design projects (full page gallery)
-    {
-        cat: 'Graphic Design',
-        tab: 'graphic',
-        title: 'Brand Identity – Sample Client',
-        coverImage: 'images/graphic1.jpg',
-        images: ['images/graphic1.jpg', 'images/graphic1b.jpg', 'images/graphic1c.jpg'],
-        desc: 'Logo, color palette, and brand guidelines for a startup.',
-        tags: ['Adobe Illustrator', 'Figma'],
-    },
-    {
-        cat: 'Graphic Design',
-        tab: 'graphic',
-        title: 'Social Media Pack',
-        coverImage: 'images/graphic2.jpg',
-        images: ['images/graphic2.jpg', 'images/graphic2b.jpg'],
-        desc: 'Instagram and Facebook templates for a lifestyle brand.',
-        tags: ['Canva', 'Adobe Photoshop'],
-    },
+    //{
+    //    cat: 'Graphic Design',
+    //    tab: 'graphic',
+    //    title: 'Brand Identity – Sample Client',
+    //    coverImage: '',
+    //    images: [''],
+    //    desc: 'Logo, color palette, and brand guidelines for a startup.',
+    //    tags: ['Adobe Illustrator', 'Figma'],
+    //},
 
     // ── Video Editing projects (full page gallery)
-    {
-        cat: 'Video Editing',
-        tab: 'video',
-        title: 'Travel Reel',
-        coverImage: 'images/video1-thumb.jpg',
-        videoUrl: 'https://www.youtube.com/embed/YOUR_VIDEO_ID',
-        desc: 'Short travel reel edited for Instagram.',
-        tags: ['CapCut', 'Adobe Premiere Pro'],
-    },
-    {
-        cat: 'Video Editing',
-        tab: 'video',
-        title: 'Event Highlights',
-        coverImage: 'images/video2-thumb.jpg',
-        videoUrl: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_2',
-        desc: 'Highlight reel for a university event.',
-        tags: ['DaVinci Resolve'],
-    },
+    //{
+    //    cat: 'Video Editing',
+    //    tab: 'video',
+    //    title: 'Travel Reel',
+    //    coverImage: 'images/video1-thumb.jpg',
+    //    videoUrl: 'https://www.youtube.com/embed/YOUR_VIDEO_ID',
+    //    desc: 'Short travel reel edited for Instagram.',
+    //    tags: ['CapCut', 'Adobe Premiere Pro'],
+    //},
 ];
 
 // ─────────────────────────────────────────────
