@@ -16,23 +16,21 @@ I worked as a full-stack developer, building the backend using ASP.NET MVC with 
         tags: ['C#', 'ASP.NET MVC', 'JavaScript', 'HTML5', 'CSS3', 'SQL SSMS', 'Jira', 'Figma']
     },
     {
-        cat: 'Web / Front-End',
-        link: 'https://facebook.com',
+        cat: 'Front-End',
+        link: 'https://dev.mem.me/',
         tab: 'web',
-        title: 'Bleeb Translator',
-        images: ['images/proj3.jpg', 'images/proj3.1.jpg'],
-        desc: `Bleeb Translator is a dynamic and playful web application that converts user input into a fictional, whimsical language called "Bleeb." Designed to be both entertaining and interactive, the translator features a sleek, responsive interface with real-time text transformation and engaging animations.
-
-As the front-end developer, I focused on delivering a seamless user experience with intuitive controls and visually appealing feedback.`,
+        title: 'Mem.me',
+        images: ['images/proj1.jpg', 'images/proj1.1.jpg', 'images/proj1.2.jpg', 'images/proj1.3.jpg'],
+        desc: `Designed a web platform that is designed to make memorization effortless — helping users learn lyrics, vocabulary, scientific terms, and more anytime, anywhere through a simple and accessible experience.`,
         tags: ['Vue.js', 'HTML5', 'CSS3', 'Figma']
     },
     {
-        cat: 'Web Design',
-        link: null,
+        cat: 'Front-End',
+        link: 'https://usframe.com',
         tab: 'web',
-        title: 'Portfolio Website',
-        images: ['images/proj1.jpg'],
-        desc: `A fully responsive personal portfolio built to showcase my development journey and creative work. Features dark/light mode, smooth animations, a project carousel, and certifications showcase.`,
+        title: 'UsFrame',
+        images: ['images/proj3.jpg', 'images/proj3.1.jpg', 'images/proj3.2.jpg'],
+        desc: `Designed a browser-based video calling application with link-based room access, real-time peer communication, and shared media controls that allow participants to manage camera and microphone states collaboratively.`,
         tags: ['HTML5', 'CSS3', 'JavaScript', 'Tailwind CSS']
     },
 
