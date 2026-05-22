@@ -5,7 +5,7 @@
 const PROJECTS = [
     // ── Web Development
     {
-        cat: 'Web Development',
+        cat: 'Full-Stack',
         link: null,
         tab: 'web',
         title: 'Paramount Key Operational Procedures',
@@ -22,7 +22,7 @@ I worked as a full-stack developer, building the backend using ASP.NET MVC with 
         title: 'Mem.me',
         images: ['images/proj1.jpg', 'images/proj1.1.jpg', 'images/proj1.2.jpg', 'images/proj1.3.jpg'],
         desc: `Designed a web platform that is designed to make memorization effortless — helping users learn lyrics, vocabulary, scientific terms, and more anytime, anywhere through a simple and accessible experience.`,
-        tags: ['Vue.js', 'HTML5', 'CSS3', 'Figma']
+        tags: ['Vue.js', 'HTML5', 'CSS3', 'JavaScript']
     },
     {
         cat: 'Front-End',
@@ -31,7 +31,7 @@ I worked as a full-stack developer, building the backend using ASP.NET MVC with 
         title: 'UsFrame',
         images: ['images/proj3.jpg', 'images/proj3.1.jpg', 'images/proj3.2.jpg'],
         desc: `Designed a browser-based video calling application with link-based room access, real-time peer communication, and shared media controls that allow participants to manage camera and microphone states collaboratively.`,
-        tags: ['HTML5', 'CSS3', 'JavaScript', 'Tailwind CSS']
+        tags: ['HTML5', 'CSS3', 'JavaScript', 'Vue.js']
     },
 
     // ── UI/UX Design
