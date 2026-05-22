@@ -15,6 +15,20 @@ function openModal(i) {
   document.getElementById('mTitle').textContent = p.title;
   document.getElementById('mDesc').textContent  = p.desc;
   document.getElementById('mTags').innerHTML    = p.tags.map(t => `<span class="tag">${t}</span>`).join('');
+  const linkEl = document.getElementById('mLiveLink');
+  if (p.link) {
+    linkEl.innerHTML = `<a href="${p.link}" target="_blank" rel="noopener" class="modal-live-btn">
+      View Live
+      <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" stroke="currentColor"
+        stroke-width="2.5" viewBox="0 0 24 24">
+        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+        <polyline points="15 3 21 3 21 9"/>
+        <line x1="10" y1="14" x2="21" y2="3"/>
+      </svg>
+    </a>`;
+  } else {
+    linkEl.innerHTML = `<span class="modal-live-unavailable">🔒 Not available to public</span>`;
+  }
 
   galImages = p.images.length ? p.images : [''];
   galIdx    = 0;

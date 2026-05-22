@@ -3,7 +3,9 @@
 *::after {
 	box-sizing: border-box;
 	margin: 0;
-	padding: 0
+	padding: 0;
+	-ms-overflow-style: none; 
+	scrollbar-width: none;   
 }
 
 :root {
@@ -31,7 +33,7 @@
 
 html {
 	scroll-behavior: smooth;
-	font-size: 16px
+	font-size: 16px;
 }
 
 body {
@@ -2246,4 +2248,40 @@ body.light .mob-nav button {
 .reveal.visible {
 	opacity: 1;
 	transform: none
+}
+
+.modal-live {
+  margin-top: 1.25rem;
+}
+
+.modal-live-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  padding: .55rem 1.1rem;
+  background: var(--accent);
+  color: var(--bg);
+  font-family: var(--font-ui);
+  font-size: .85rem;
+  font-weight: 600;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: opacity .2s;
+}
+
+.modal-live-btn:hover {
+  opacity: .85;
+}
+
+.modal-live-unavailable {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .45rem .9rem;
+  background: var(--surface2);
+  color: var(--muted);
+  font-family: var(--font-ui);
+  font-size: .82rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
 }

@@ -6,6 +6,7 @@ const PROJECTS = [
   // ── Web Development
   {
     cat: 'Web Development',
+    link: null,
     tab: 'web',
     title: 'Paramount Key Operational Procedures',
     images: ['images/proj2.jpg'],
@@ -16,6 +17,7 @@ I worked as a full-stack developer, building the backend using ASP.NET MVC with 
   },
   {
     cat: 'Web / Front-End',
+    link: 'https://facebook.com',
     tab: 'web',
     title: 'Bleeb Translator',
     images: ['images/proj3.jpg', 'images/proj3.1.jpg'],
@@ -26,6 +28,7 @@ As the front-end developer, I focused on delivering a seamless user experience w
   },
   {
     cat: 'Web Design',
+    link: null,
     tab: 'web',
     title: 'Portfolio Website',
     images: ['images/proj1.jpg'],
@@ -67,6 +70,36 @@ As the front-end developer, I focused on delivering a seamless user experience w
 // ─────────────────────────────────────────────
 const CERTS = [
   {
+    name: 'API Management and Development Training (2025)',
+    issuer: 'Coursera – IBM Developer Skills Network',
+    img: 'images/cert10.png',
+    pdf: 'files/cert10.pdf'
+  },
+  {
+    name: 'Django Application for Development with SQL and Databases (2025)',
+    issuer: 'Coursera – IBM Developer Skills Network',
+    img: 'images/cert9.png',
+    pdf: 'files/cert9.pdf'
+  },
+  {
+    name: 'Developing AI Applications with Python and Flask (2025)',
+    issuer: 'Coursera – IBM Developer Skills Network',
+    img: 'images/cert8.png',
+    pdf: 'files/cert8.pdf'
+  },
+  {
+    name: 'IPython for Data Science, AI & Development (2025)',
+    issuer: 'Coursera – IBM Developer Skills Network',
+    img: 'images/cert7.png',
+    pdf: 'files/cert7.pdf'
+  },
+  {
+    name: 'Developing Front-End Apps with React (2025)',
+    issuer: 'Cognitive Class – IBM Developer Skills Network',
+    img: 'images/cert6.png',
+    pdf: 'files/cert6.pdf'
+  },
+  {
     name: 'Getting Started with Git and GitHub (2025)',
     issuer: 'Coursera – IBM Developer Skills Network',
     img: 'images/cert5.jpg',
@@ -95,7 +128,7 @@ const CERTS = [
     issuer: 'Cognitive Class – IBM Developer Skills Network',
     img: 'images/cert1.jpg',
     pdf: 'files/cert1.pdf'
-  },
+  }
 ];
 
 // ─────────────────────────────────────────────
