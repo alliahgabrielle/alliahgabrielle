@@ -49,10 +49,37 @@ function initReveal() {
 // ── Contact form submission (simulated)
 function submitForm() {
   const btn = document.querySelector('.form-submit');
+
+  const fname   = document.getElementById('fname').value.trim();
+  const lname   = document.getElementById('lname').value.trim();
+  const email   = document.getElementById('email').value.trim();
+  const subject = document.getElementById('subject').value.trim();
+  const msg     = document.getElementById('msg').value.trim();
+
+  if (!fname || !email || !msg) {
+    alert('Please fill in at least your name, email, and message.');
+    return;
+  }
+
   btn.textContent = 'Sending...';
   btn.disabled = true;
-  setTimeout(() => {
+
+  emailjs.init(EMAILJS_PUBLIC_KEY);
+
+  emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+    from_name:  fname + ' ' + lname,
+    from_email: email,
+    subject:    subject || 'No subject',
+    message:    msg,
+  })
+  .then(() => {
     btn.style.display = 'none';
     document.getElementById('formSuccess').style.display = 'block';
-  }, 1200);
+  })
+  .catch((error) => {
+    console.error('EmailJS error:', error);
+    btn.textContent = 'Send Message ✦';
+    btn.disabled = false;
+    alert('Something went wrong. Please try again or email me directly.');
+  });
 }
