@@ -229,9 +229,9 @@ const TECH_ROW2 = [{
         name: 'Adobe XD',
         img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xd/xd-plain.svg'
     },
-    {
-        name: 'Canva',
-        img: 'https://upload.wikimedia.org/wikipedia/commons/0/08/Canva_icon_2021.png'
+    { 
+        name: 'Canva', 
+        img: 'https://www.vectorlogo.zone/logos/canva/canva-icon.svg' 
     },
     {
         name: 'Framer',
@@ -243,7 +243,7 @@ const TECH_ROW2 = [{
     },
     {
         name: 'Shopify',
-        img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/shopify/shopify-original.svg'
+        img: 'https://cdn.worldvectorlogo.com/logos/shopify.svg' 
     },
     {
         name: 'Node.js',
