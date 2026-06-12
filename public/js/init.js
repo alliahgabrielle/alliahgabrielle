@@ -26,7 +26,7 @@ function buildTechRows() {
 function buildWorksGrids() {
   const tabs = {
     web: [],
-    uiux: [],
+    automation: [],
     graphic: [],
     video: []
   };

@@ -37,7 +37,7 @@ I worked as a full-stack developer, building the backend using ASP.NET MVC with 
     // ── UI/UX Design
     //{
     //    cat: 'UI/UX Design',
-    //    tab: 'uiux',
+    //    tab: 'automation',
     //    title: '🎨 UI/UX Projects Coming Soon',
     //    images: [],
     //    desc: "I'm currently preparing my UI/UX case studies. Check back soon for wireframes, prototypes, and design system work!",
