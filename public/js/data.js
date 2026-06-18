@@ -6,13 +6,17 @@ const PROJECTS = [
     // ── Web Development
     {
         cat: 'Full-Stack',
-        link: null,
+        link: 'https://impackfulk9.vercel.app/',
         tab: 'web',
-        title: 'Paramount Key Operational Procedures',
+        title: 'Impackful K9',
         images: ['images/proj2.jpg'],
-        desc: `The E-Learning System is a web-based platform developed to deliver department-specific training materials to employees within an organization. Each employee can view only the content intended for their assigned department, ensuring relevance and clarity in learning delivery.
+        desc: `Impackful K9 is a full brand website for a dog training company based in the Lower Mainland, BC. Built entirely with vanilla HTML, CSS, and JavaScript — no frameworks, no build tools — the site is architected as a multi-page SPA using a custom partial injection system that dynamically fetches and renders HTML sections at runtime.
 
-I worked as a full-stack developer, building the backend using ASP.NET MVC with C# and implementing the frontend using HTML5, CSS3, and JavaScript. Data management was handled with Microsoft SQL Server, and the team followed agile practices using Jira for task tracking and sprint planning.`,
+        The experience opens with a cinematic video intro and a light-burst transition before presenting a crossroads screen where visitors choose how they'd like to explore the site. From there, a fully scrollable editorial layout walks visitors through the brand story: the life they're training for, why most training doesn't stick, and the philosophy behind The Mindful Method™.
+
+        Key technical highlights include a custom light/dark theme system using CSS custom properties, a dual-logo swap tied to the active theme, a pill-shaped floating navigation with a sliding active indicator, scroll-triggered reveal animations via IntersectionObserver, and a mobile-responsive layout with a separate hero image and gradient adaptation for smaller screens.
+
+        Planned expansions include an integrated online shop and an AI-powered chatbot to help visitors find the right training program — turning the site from a brand presence into a full client acquisition and sales system.`,
         tags: ['C#', 'ASP.NET MVC', 'JavaScript', 'HTML5', 'CSS3', 'SQL SSMS', 'Jira', 'Figma']
     },
     {
