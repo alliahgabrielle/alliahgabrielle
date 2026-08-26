@@ -239,7 +239,7 @@ const TECH_ROW2 = [{
     },
     {
         name: 'Framer',
-        img: 'https://cdn.brandfetch.io/idRjXCqGMq/w/400/h/400/theme/dark/icon.png?k=bfHSJFAPEG'
+        img: 'https://www.vectorlogo.zone/logos/framer/framer-icon.svg'
     },
     {
         name: 'WordPress',
