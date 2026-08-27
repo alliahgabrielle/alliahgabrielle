@@ -73,8 +73,14 @@ const PROJECTS = [
 
 // ─────────────────────────────────────────────
 const CERTS = [{
+        name: 'Knowledge Sharing on Basic DNS Administration (2025)',
+        issuer: 'Department of Science and Technology – Advanced Science and Technology Institute',
+        img: 'images/cert11.jpg',
+        pdf: 'files/cert11.pdf'
+    },
+    {
         name: 'API Management and Development Training (2025)',
-        issuer: 'Coursera – IBM Developer Skills Network',
+        issuer: 'Department of Science and Technology – Advanced Science and Technology Institute',
         img: 'images/cert10.png',
         pdf: 'files/cert10.pdf'
     },
